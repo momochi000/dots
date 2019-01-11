@@ -1,1 +1,61 @@
-/home/momochi/.Xresources
+xft.dpi: 96
+xft.antialias: false
+xft.hinting: false
+xft.rgba: rgb
+
+! URXVT CONFIG ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+URxvt.scrollBar: false
+URxvt.saveLines: 10000
+
+urxvt*transparent: true
+urxvt*shading: 20
+
+urxvt.font:xft:Terminus:size=12
+
+!Scientifica seems to have too much line height
+!urxvt.font:xft:scientifica:size=11
+!URxvt.lineSpace: -4
+!URxvt.letterSpace: -3
+
+!urxvt.font: xft:Terminess Powerline\
+!          , xft:scientifica
+!          , xft:bitocra13full:antialias=false:hinting=false:pixelsize=14
+
+! COLORS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+! special
+*.foreground:   #96bbc1
+*.background:   #120a0c
+*.cursorColor:  #96bbc1
+
+! black
+*.color0:       #120a0c
+*.color8:       #698287
+
+! red
+*.color1:       #982764
+*.color9:       #ff3af2
+
+! green
+*.color2:       #d24455
+*.color10:      #ff1531
+
+! yellow
+*.color3:       #ecc360
+*.color11:      #ecc360
+
+! blue
+*.color4:       #44748d
+*.color12:      #44748d
+
+! magenta
+*.color5:       #4a17db
+*.color13:      #4a17db
+
+! cyan
+*.color6:       #5015fd
+*.color14:      #2c93f5
+
+! white
+*.color7:       #96bbc1
+*.color15:      #96bbc1
+

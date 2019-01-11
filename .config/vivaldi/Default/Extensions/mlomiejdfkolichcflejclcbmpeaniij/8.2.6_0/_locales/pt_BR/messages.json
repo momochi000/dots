@@ -1,0 +1,2108 @@
+{
+   "account_creation_privacy_statement": {
+      "description": "",
+      "message": "Eu estou de acordo com as práticas de manuseio de dados encontradas na $LINK_PS_START$Declaração de Privacidade$LINK_PS_END$ e os termos encontrados em seu $LINK_UA_START$Acordo de Licençat$LINK_UA_END$.",
+      "placeholders": {
+         "link_ps_end": {
+            "content": "\u003C/a>"
+         },
+         "link_ps_start": {
+            "content": "\u003Ca target=\"_blank\" href=\"https://www.ghostery.com/about-us/privacy-statements/ghostery-browser-extension/ghostery-browser-extension-privacy-statement/\">"
+         },
+         "link_ua_end": {
+            "content": "\u003C/a>"
+         },
+         "link_ua_start": {
+            "content": "\u003Ca target=\"_blank\" href=\"https://www.ghostery.com/about-us/privacy-statements/ghostery-browser-extension/ghostery-browser-extension-end-user-license-agreem/\">"
+         }
+      }
+   },
+   "alert_ad_block_off": {
+      "description": "",
+      "message": "O bloqueio de anúncios aprimorado está DESATIVADO Os anúncios não serão bloqueados."
+   },
+   "alert_ad_block_on": {
+      "description": "",
+      "message": "O bloqueio de anúncios aprimorado está ATIVADO. Os anúncios serão bloqueados."
+   },
+   "alert_anti_track_off": {
+      "description": "",
+      "message": "O anti-rastreamento aprimorado está DESATIVADO. Os dados pessoais não serão anonimizados."
+   },
+   "alert_anti_track_on": {
+      "description": "",
+      "message": "O anti-rastreamento aprimorado está ATIVO. Os dados pessoais serão anonimizados."
+   },
+   "alert_ghostery_paused": {
+      "description": "",
+      "message": "A extensão Ghostery foi pausada."
+   },
+   "alert_ghostery_resumed": {
+      "description": "",
+      "message": "A extensão Ghostery foi retomada."
+   },
+   "alert_reload": {
+      "description": "",
+      "message": "Clique para ver as mudanças."
+   },
+   "alert_site_restricted": {
+      "description": "",
+      "message": "Site na lista negra. Os rastreadores serão bloqueados e o anti-rastreamento será ativado neste site."
+   },
+   "alert_site_restricted_off": {
+      "description": "",
+      "message": "O site não está mais na lista negra."
+   },
+   "alert_site_trusted": {
+      "description": "",
+      "message": "Site na lista branca. Os rastreadores serão permitidos e o anti-rastreamento está desativado neste site."
+   },
+   "alert_site_trusted_off": {
+      "description": "",
+      "message": "O site não está mais na lista branca."
+   },
+   "alert_smart_block_off": {
+      "description": "",
+      "message": "Bloqueio inteligente DESATIVADO. O bloqueador de rastreadores não será automaticamente ajustado."
+   },
+   "alert_smart_block_on": {
+      "description": "",
+      "message": "Bloqueio inteligente ATIVADO. O bloqueio inteligente será ajustado para otimizar o desempenho da página."
+   },
+   "all": {
+      "description": "Default setting in the 'filter by type' dropdown for the tag browser. Doesn't filter anything out. Should read as 'Show all'.",
+      "message": "tudo"
+   },
+   "banner_check_your_email_title": {
+      "description": "",
+      "message": "Verifique em breve seu email quanto ao recebimento de um link para redefinir sua senha."
+   },
+   "banner_no_such_account_message": {
+      "description": "",
+      "message": "Aparentemente, não pudemos encontrar essa combinação de email e senha. Tente outra vez."
+   },
+   "blacklist_error_duplicate_url": {
+      "description": "",
+      "message": "Esse site já está restrito."
+   },
+   "blacklist_error_whitelist_url": {
+      "description": "",
+      "message": "Esse site foi removido de nossa lista de Sites Confiados e adicionado à sua lista de Sites Restritos."
+   },
+   "blocked": {
+      "description": "Select this to show only blocked (checked) tags in the tag browser. Should read as 'Show blocked'.",
+      "message": "bloqueadas"
+   },
+   "blocked_redirect_action_always_title": {
+      "description": "Title for the 'Allow always and reload' button on the blocked redirect page.",
+      "message": "Sempre permitir e recarregar."
+   },
+   "blocked_redirect_action_through_once_title": {
+      "description": "Title for the 'Allow once' button on the blocked redirect page.",
+      "message": "Permitir etiquetas até que o destino final seja alcançado."
+   },
+   "blocked_redirect_page_title": {
+      "description": "Page title for blocked_redirect.html which appears when a redirect is blocked.",
+      "message": "Ghostery impediu um redirecionamento."
+   },
+   "blocked_redirect_prevent": {
+      "description": "Text appearing on block_redirect.html when a redirect is blocked. Should appear inside \"redirect-prevent\" div.",
+      "message": "Ghostery evitou um redirecionamento de $BREAK$ $SP_O_START$$ORIGIN$$SP_END$ para $SP_D_START$$DESTINATION$$SP_END$, $BREAK$o qual é parte de $A_START$$APP$$A_END$. $BREAK$",
+      "placeholders": {
+         "a_end": {
+            "content": "\u003C/a>"
+         },
+         "a_start": {
+            "content": "\u003Ca id=\"name\" href=\"$4\" target=\"_blank\">"
+         },
+         "app": {
+            "content": "$3",
+            "example": "DoubleClick"
+         },
+         "break": {
+            "content": "\u003Cbr>"
+         },
+         "destination": {
+            "content": "$2"
+         },
+         "origin": {
+            "content": "$1"
+         },
+         "sp_d_start": {
+            "content": "\u003Cspan id=\"destination\">"
+         },
+         "sp_end": {
+            "content": "\u003C/span>"
+         },
+         "sp_o_start": {
+            "content": "\u003Cspan id=\"origin\">"
+         }
+      }
+   },
+   "blocked_redirect_url_content": {
+      "description": "Text appearing on block_redirect.html when a redirect is blocked and a final 'destination' URL is successfully found.",
+      "message": "Esta etiqueta aparece para redirecionar para $BREAK$ $A_START$$REDIRECT_URL$$A_END$ Se este link parecer estar certo e você gostaria de proceder, clique no ícone abaixo para permitir $APP$ e recarregar.",
+      "placeholders": {
+         "a_end": {
+            "content": "\u003C/a>"
+         },
+         "a_start": {
+            "content": "\u003Ca href=\"$1\" class=\"ellipsis\" title=\"$1\">"
+         },
+         "app": {
+            "content": "$2",
+            "example": "DoubleClick"
+         },
+         "break": {
+            "content": "\u003Cbr>"
+         },
+         "redirect_url": {
+            "content": "$1"
+         }
+      }
+   },
+   "blocking_block_all": {
+      "description": "",
+      "message": "Bloquear tudo"
+   },
+   "blocking_block_shown": {
+      "description": "",
+      "message": "Bloquear todos mostrados"
+   },
+   "blocking_category_blocked": {
+      "description": "as in '5 (trackers) BLOCKED'",
+      "message": "Bloqueados"
+   },
+   "blocking_category_tracker": {
+      "description": "",
+      "message": "Rastreador"
+   },
+   "blocking_category_tracker_found": {
+      "description": "",
+      "message": "Encontrado"
+   },
+   "blocking_category_trackers": {
+      "description": "",
+      "message": "Rastreadores"
+   },
+   "blocking_trackers": {
+      "description": "",
+      "message": "Rastreadores"
+   },
+   "blocking_unblock_all": {
+      "description": "",
+      "message": "Desbloquear tudo"
+   },
+   "blocking_unblock_shown": {
+      "description": "",
+      "message": "Desbloquear todos mostrados"
+   },
+   "box_dismiss_0s": {
+      "description": "",
+      "message": "$SPAN_START$Nunca$SPAN_END$ descartar",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_dismiss_15s": {
+      "description": "",
+      "message": "Descartar $SPAN_START$após 15 segundos$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_dismiss_30s": {
+      "description": "",
+      "message": "Decartar $SPAN_START$após 30 segundos$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_dismiss_5s": {
+      "description": "",
+      "message": "Descartar $SPAN_START$após 5 segundos$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_display_bl": {
+      "description": "",
+      "message": "Exibir $SPAN_START$na inferior esquerda$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_display_br": {
+      "description": "",
+      "message": "Exibir $SPAN_START$na inferior direita$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_display_tl": {
+      "description": "",
+      "message": "Exibir $SPAN_START$na superior esquerda$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_display_tr": {
+      "description": "",
+      "message": "Exibir $SPAN_START$na superior direita$SPAN_END$",
+      "placeholders": {
+         "span_end": {
+            "content": "\u003C/span>"
+         },
+         "span_start": {
+            "content": "\u003Cspan>"
+         }
+      }
+   },
+   "box_hide": {
+      "description": "",
+      "message": "Ocultar caixa"
+   },
+   "box_hide_expanded": {
+      "description": "",
+      "message": "Ocultar caixa púrpura"
+   },
+   "box_looking": {
+      "description": "",
+      "message": "Olhando"
+   },
+   "box_options_expanded": {
+      "description": "",
+      "message": "Opções"
+   },
+   "box_settings": {
+      "description": "",
+      "message": "Configurações"
+   },
+   "box_settings_expanded": {
+      "description": "",
+      "message": "Configurações do meu Ghostery"
+   },
+   "box_tracker": {
+      "description": "",
+      "message": "Rastreador"
+   },
+   "box_trackers": {
+      "description": "",
+      "message": "Rastreadores"
+   },
+   "box_warning_compatibility": {
+      "description": "",
+      "message": "Rastreadores de páginas quebradas"
+   },
+   "box_warning_nonsecure": {
+      "description": "",
+      "message": "Rastreadores não-seguros"
+   },
+   "box_warning_slow": {
+      "description": "",
+      "message": "Rastreadores lentos"
+   },
+   "browse_button_label": {
+      "description": "",
+      "message": "Acessar..."
+   },
+   "browser_button_tooltip": {
+      "description": "Ghostery's browser button tooltip.",
+      "message": "Ver as descobertas do Ghostery"
+   },
+   "button_cancel": {
+      "description": "Part of a confirmation dialog. Clicking this cancels the action.",
+      "message": "Cancelar"
+   },
+   "category_advertising": {
+      "description": "Ghostery organizes tags by category. This is one of several tag categories.",
+      "message": "Anúncio"
+   },
+   "category_advertising_desc": {
+      "description": "User-facing description for the Advertising tag category.",
+      "message": "Inclui serviços de anúncios como coleta de dados, análise comportamental ou redirecionamento."
+   },
+   "category_audio_video_player": {
+      "description": "Ghostery organizes tags by category. This is one of several tag categories.",
+      "message": "Reprodutor de Áudio/Vídeo"
+   },
+   "category_audio_video_player_desc": {
+      "description": "User-facing description for the Audio/Video Player tag category.",
+      "message": "Possibilita aos websites publicarem, distribuírem e otimizadrem conteúdo de áudio e vídeo."
+   },
+   "category_comments": {
+      "description": "Ghostery organizes tags by category. This is one of several tag categories.",
+      "message": "Comentários"
+   },
+   "category_comments_desc": {
+      "description": "User-facing description for the Comments tag category.",
+      "message": "Habilita as seções de comentários para artigos e avaliações de produtos."
+   },
+   "category_customer_interaction": {
+      "description": "Ghostery organizes tags by category. This is one of several tag categories.",
+      "message": "Interação com o cliente"
+   },
+   "category_customer_interaction_desc": {
+      "description": "User-facing description for the Customer Interaction tag category.",
+      "message": "Inclui bate-papo, mensagens por email, suporte ao cliente e outras ferramentas de interação."
+   },
+   "category_essential": {
+      "description": "Ghostery organizes tags by category. This is one of several tag categories.",
+      "message": "Essencial"
+   },
+   "category_essential_desc": {
+      "description": "User-facing description for the Essential tag category.",
+      "message": "Inclui rastreadores críticos para a funcionalidade do website, tal como gerenciadores de etiquetas e notas de privacidade."
+   },
+   "category_pornvertising": {
+      "description": "Ghostery organizes tags by category. This is one of several tag categories.",
+      "message": "Anúncios adultos"
+   },
+   "category_pornvertising_desc": {
+      "description": "User-facing description for the Adult Advertising tag category.",
+      "message": "Inclui tecnologias de anúncios concebidas para sites de conteúdo adulto."
+   },
+   "category_site_analytics": {
+      "description": "Ghostery organizes tags by category. This is one of several tag categories.",
+      "message": "Analítica do site"
+   },
+   "category_site_analytics_desc": {
+      "description": "User-facing description for the Site Analytics tag category.",
+      "message": "Inclui analítica de dados, uso do site e rastreadores de desempenho."
+   },
+   "category_social_media": {
+      "description": "Ghostery organizes tags by category. This is one of several tag categories.",
+      "message": "Mídia Social"
+   },
+   "category_social_media_desc": {
+      "description": "User-facing description for the Social Media tag category.",
+      "message": "Inclui recursos relacionados às plataformas de mídia social."
+   },
+   "category_uncategorized": {
+      "description": "",
+      "message": "Sem categorias"
+   },
+   "category_uncategorized_desc": {
+      "description": "",
+      "message": "Esses rastreadores ainda não foram categorizados."
+   },
+   "click2play_allow_always_tooltip": {
+      "description": "Tooltip that appears over the 'allow always' click2play button.",
+      "message": "Sempre permitir e recarregar."
+   },
+   "click2play_allow_once_button_tooltip": {
+      "description": "Tooltip that appears over the click2play replacement for 'social' buttons.",
+      "message": "Ghostery bloqueou $APP_NAME$ Clique aqui para permitir que carregue apenas essa vez.",
+      "placeholders": {
+         "app_name": {
+            "content": "$1",
+            "example": "Twitter Button"
+         }
+      }
+   },
+   "click2play_allow_once_tooltip": {
+      "description": "Tooltip that appears over the 'allow once' click2play button.",
+      "message": "Permitir uma vez e recarregar."
+   },
+   "click2play_blocked": {
+      "description": "",
+      "message": "Ghostery bloqueou $APP_NAME$",
+      "placeholders": {
+         "app_name": {
+            "content": "$1",
+            "example": "SoundCloud"
+         }
+      }
+   },
+   "click2play_comment_form": {
+      "description": "",
+      "message": "Ghostery bloqueou comentários com o apoio de $NAME$",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "Disqus"
+         }
+      }
+   },
+   "click2play_review_form": {
+      "description": "",
+      "message": "Ghostery bloqueou avaliações com o apoio de $NAME$",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "Disqus"
+         }
+      }
+   },
+   "click2play_survey_form": {
+      "description": "",
+      "message": "Ghostery bloqueou pesquisas com o apoio de $NAME$",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "Disqus"
+         }
+      }
+   },
+   "click2play_video_form": {
+      "description": "",
+      "message": "Ghostery bloqueou o reprodutor de vídeo $NAME$",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "Disqus"
+         }
+      }
+   },
+   "collapse_all": {
+      "description": "",
+      "message": "Recolher tudo"
+   },
+   "consent_privacy": {
+      "description": "",
+      "message": "Consentimento necessário."
+   },
+   "copyright": {
+      "description": "Copyright message, shown in page footers.",
+      "message": "$C$ $YEAR$ $GHOSTERY$, parte da $COMPANY_ADDRESS$",
+      "placeholders": {
+         "c": {
+            "content": "&copy;"
+         },
+         "company_address": {
+            "content": "$1",
+            "example": "GHOSTERY, Inc., Such-and-such Street, Such-and-such Floor, New York, NY, Zip Code"
+         },
+         "ghostery": {
+            "content": "\u003Ca href='https://www.ghostery.com' target='_blank'>Ghostery\u003C/a>"
+         },
+         "year": {
+            "content": "2015"
+         }
+      }
+   },
+   "create_password_field_label": {
+      "description": "",
+      "message": "Senha:"
+   },
+   "drawer_desc_enable_ad_block": {
+      "description": "",
+      "message": "Locais de anúncios foram bloqueados"
+   },
+   "drawer_desc_enable_anti_tracking": {
+      "description": "",
+      "message": "Os pontos de dados privados foram removidos."
+   },
+   "drawer_desc_enable_smart_block": {
+      "description": "",
+      "message": "Os rastreadores foram temporariamente bloqueados ou desbloqueados."
+   },
+   "drawer_label_enable_ad_block": {
+      "description": "",
+      "message": "Anúncios bloqueados"
+   },
+   "drawer_label_enable_anti_tracking": {
+      "description": "",
+      "message": "Rastreadores anonimizados"
+   },
+   "drawer_label_enable_smart_block": {
+      "description": "",
+      "message": "Rastreadores ajustados"
+   },
+   "drawer_off": {
+      "description": "",
+      "message": "Desligado"
+   },
+   "drawer_on": {
+      "description": "",
+      "message": "Ligado"
+   },
+   "drawer_status_enable_ad_block": {
+      "description": "",
+      "message": "Bloqueio de anúncios é"
+   },
+   "drawer_status_enable_anti_tracking": {
+      "description": "",
+      "message": "Anti-rastreamento é"
+   },
+   "drawer_status_enable_smart_block": {
+      "description": "",
+      "message": "Bloqueio inteligente está"
+   },
+   "drawer_title_enable_ad_block": {
+      "description": "",
+      "message": "Bloqueio de anúncios aprimorado"
+   },
+   "drawer_title_enable_anti_tracking": {
+      "description": "",
+      "message": "Anti-rastreamento aprimorado"
+   },
+   "drawer_title_enable_smart_block": {
+      "description": "",
+      "message": "Bloqueio inteligente"
+   },
+   "drawer_tooltip_enable_ad_block": {
+      "description": "",
+      "message": "Mostrar ou bloquear todos os anúncios nos websites."
+   },
+   "drawer_tooltip_enable_anti_tracking": {
+      "description": "",
+      "message": "Os rastreadores integrados registram as atividades do usuário na maioria dos websites. O anti-rastreamento remove todos os dados que possam ser usados para identificar você antes que sejam coletados por estes rastreadores. Essa figura mostra quantos pontos de dados foram removidos no site."
+   },
+   "drawer_tooltip_enable_smart_block": {
+      "description": "",
+      "message": "Bloquear e desbloquear automaticamente os rastreadores para otimizar o desempenho da página"
+   },
+   "email_address_in_use": {
+      "description": "",
+      "message": "Este email já está sendo usado.  Por favor, escolha outro. "
+   },
+   "email_confirm_field_label": {
+      "description": "",
+      "message": "Confirmar email:"
+   },
+   "email_field_label": {
+      "description": "",
+      "message": "Email:"
+   },
+   "enable_when_blacklisted": {
+      "description": "",
+      "message": "Para usar esta função, desfaça Restringir Site."
+   },
+   "enable_when_not_scanned": {
+      "description": "",
+      "message": "Para usar esta função, navegue até outra página."
+   },
+   "enable_when_paused": {
+      "description": "",
+      "message": "Para usar esta função, continue o Ghostery."
+   },
+   "enable_when_whitelisted": {
+      "description": "",
+      "message": "Para usar esta função, desfaça Confiar no Site."
+   },
+   "error_email_forgot": {
+      "description": "",
+      "message": "Hmm, não consigo encontrar esse email. Tentar outro, talvez?"
+   },
+   "expand_all": {
+      "description": "",
+      "message": "Expandir tudo"
+   },
+   "file_was_not_selected": {
+      "description": "",
+      "message": "O arquivo não foi selecionado"
+   },
+   "first_name_field_label": {
+      "description": "",
+      "message": "Primeiro nome (opcional):"
+   },
+   "forgot_password_message": {
+      "description": "",
+      "message": "Esqueceu sua senha? Ei, isso acontece com todo mundo. Enviaremos a você instruções para redefinir sua senha."
+   },
+   "global_settings_saved": {
+      "description": "",
+      "message": "Configurações Globais Salvas"
+   },
+   "global_settings_saved_category": {
+      "description": "",
+      "message": "Configuração de Categoria Global Salva"
+   },
+   "global_settings_saved_tracker": {
+      "description": "",
+      "message": "Configuração do Rastreado Global Salva"
+   },
+   "invalid_email_confirmation": {
+      "description": "",
+      "message": "Seus emails não conferem."
+   },
+   "invalid_email_create": {
+      "description": "",
+      "message": "Digite um email válido."
+   },
+   "invalid_email_forgot": {
+      "description": "",
+      "message": "Desculpe, você precisa informar um endereço de email válido."
+   },
+   "invalid_email_login": {
+      "description": "",
+      "message": "Desculpe, você precisa informar um endereço de email válido."
+   },
+   "last_name_field_label": {
+      "description": "",
+      "message": "Sobrenome (opcional):"
+   },
+   "license_email": {
+      "description": "",
+      "message": "Email"
+   },
+   "license_generic": {
+      "description": "",
+      "message": "Texto padrão da licença"
+   },
+   "license_information_missing": {
+      "description": "",
+      "message": "Informações do repositório da licença faltando"
+   },
+   "license_licenses": {
+      "description": "",
+      "message": "Licenças"
+   },
+   "license_module": {
+      "description": "",
+      "message": "Módulo"
+   },
+   "license_publisher": {
+      "description": "",
+      "message": "Publicante"
+   },
+   "license_repository": {
+      "description": "",
+      "message": "Repositório"
+   },
+   "license_text": {
+      "description": "",
+      "message": "Texto da licença"
+   },
+   "license_type": {
+      "description": "",
+      "message": "Tipo(s) de licença(s)"
+   },
+   "license_unknown": {
+      "description": "",
+      "message": "desconhecido"
+   },
+   "license_url": {
+      "description": "",
+      "message": "Url"
+   },
+   "name": {
+      "description": "The title of this extension (Ghostery).",
+      "message": "$EXTENSION_NAME$ – Bloqueador de anúncios para privacidade",
+      "placeholders": {
+         "extension_name": {
+            "content": "Ghostery"
+         }
+      }
+   },
+   "none": {
+      "description": "Used to say that this item does not belong to any of the groups, as in \"Groups: None\" (as opposed to \"Groups: Group A, Group B, Group C\").",
+      "message": "Nenhum"
+   },
+   "not_http_page": {
+      "description": "",
+      "message": "Certifique-se de que sua aba atual tenha uma página http ou https aberta"
+   },
+   "notification_library_update": {
+      "description": "",
+      "message": "Descobrimos alguns novos rastreadores e os adicionamos à base de dados do Ghostery."
+   },
+   "notification_library_update_link": {
+      "description": "",
+      "message": "Veja o que há de novo"
+   },
+   "notification_upgrade": {
+      "description": "",
+      "message": "Nossa equipe dedicada - e extraordinariamente atraente - trabalhou duro para lançar a nova versão do Ghostery."
+   },
+   "notification_upgrade_link": {
+      "description": "",
+      "message": "Confira os novos recursos e as correções de defeitos desta versão."
+   },
+   "notification_upgrade_link_v8": {
+      "description": "",
+      "message": "Mostre-me agora!"
+   },
+   "notification_upgrade_title_v8": {
+      "description": "",
+      "message": "Apresentando o Ghostery 8!"
+   },
+   "notification_upgrade_v8": {
+      "description": "",
+      "message": "Ajuste nossas novas funcionalidades legais e aprenda sobre o nosso maior lançamento até o momento."
+   },
+   "page_load": {
+      "description": "",
+      "message": "Carregar página"
+   },
+   "panel_about_license": {
+      "description": "",
+      "message": "Acordo de licença"
+   },
+   "panel_about_licenses": {
+      "description": "",
+      "message": "Licenças de software"
+   },
+   "panel_about_panel_header": {
+      "description": "",
+      "message": "Sobre a extensão do navegador Ghostery"
+   },
+   "panel_about_privacy_statement": {
+      "description": "",
+      "message": "Declaração de privacidade"
+   },
+   "panel_about_release_notes": {
+      "description": "",
+      "message": "Ver notas de lançamento para todas as atualizações"
+   },
+   "panel_about_version_header": {
+      "description": "",
+      "message": "Ghostery para $BROWSER$ versão $VERSION$",
+      "placeholders": {
+         "browser": {
+            "content": "$1",
+            "example": "Firefox"
+         },
+         "version": {
+            "content": "$2",
+            "example": "6.4"
+         }
+      }
+   },
+   "panel_click_to_reload": {
+      "description": "",
+      "message": "Clique para recarregar e ver as mudanças."
+   },
+   "panel_create_account": {
+      "description": "",
+      "message": "Criar conta"
+   },
+   "panel_detail_history_text": {
+      "description": "",
+      "message": "Recurso vindo em breve."
+   },
+   "panel_detail_history_title": {
+      "description": "",
+      "message": "História"
+   },
+   "panel_detail_learn_more": {
+      "description": "",
+      "message": "Aprender mais"
+   },
+   "panel_detail_menu_history_title": {
+      "description": "",
+      "message": "História"
+   },
+   "panel_detail_menu_list_title": {
+      "description": "",
+      "message": "Vista de lista"
+   },
+   "panel_detail_menu_performance_title": {
+      "description": "",
+      "message": "Desempenho"
+   },
+   "panel_detail_menu_premium_title": {
+      "description": "",
+      "message": "Premium"
+   },
+   "panel_detail_menu_rewards_title": {
+      "description": "",
+      "message": "Recompensas"
+   },
+   "panel_detail_performance_text": {
+      "description": "",
+      "message": "Recurso vindo em breve."
+   },
+   "panel_detail_performance_title": {
+      "description": "",
+      "message": "Desempenho do website"
+   },
+   "panel_detail_premium_text": {
+      "description": "",
+      "message": "Recurso vindo em breve."
+   },
+   "panel_detail_premium_title": {
+      "description": "",
+      "message": "Ghostery Premium"
+   },
+   "panel_detail_rewards_cliqz_text": {
+      "description": "",
+      "message": "Funcionalidade já disponível no painel de controle Cliqz MyOffrz."
+   },
+   "panel_detail_rewards_coming_soon": {
+      "description": "",
+      "message": "Recurso vindo em breve."
+   },
+   "panel_detail_rewards_loading": {
+      "description": "",
+      "message": "Carregando Recompensas..."
+   },
+   "panel_detail_rewards_none_found": {
+      "description": "",
+      "message": "Nenhuma recompensa encontrada"
+   },
+   "panel_detail_rewards_off": {
+      "description": "",
+      "message": "As Recompensas do Ghostery estão DESATIVADAS"
+   },
+   "panel_detail_rewards_title": {
+      "description": "",
+      "message": "Recompensas do Ghostery"
+   },
+   "panel_email_verification_sent": {
+      "description": "",
+      "message": "$BOLD_HTML_STARTS$ Sucesso! $BOLD_HTML_END$ Um email de verificação foi enviado para $EMAIL$",
+      "placeholders": {
+         "bold_html_end": {
+            "content": "\u003C/strong>"
+         },
+         "bold_html_starts": {
+            "content": "\u003Cstrong>"
+         },
+         "email": {
+            "content": "$1",
+            "example": "info@ghostery.com"
+         }
+      }
+   },
+   "panel_forgot_password": {
+      "description": "",
+      "message": "Esqueceu a senha?"
+   },
+   "panel_header_detailed_view": {
+      "description": "",
+      "message": "Visão detalhada"
+   },
+   "panel_header_sign_in": {
+      "description": "",
+      "message": "Entrar"
+   },
+   "panel_header_simple_view": {
+      "description": "",
+      "message": "Visão simples"
+   },
+   "panel_header_verify_account": {
+      "description": "",
+      "message": "Verificar conta"
+   },
+   "panel_help_contact_header": {
+      "description": "",
+      "message": "Como entrar em contato conosco"
+   },
+   "panel_help_faq": {
+      "description": "",
+      "message": "Perguntas frequentes"
+   },
+   "panel_help_feedback": {
+      "description": "",
+      "message": "Complete nossa pesquisa"
+   },
+   "panel_help_panel_header": {
+      "description": "",
+      "message": "Ajuda para a extensão do navegador Ghostery"
+   },
+   "panel_help_questions_header": {
+      "description": "",
+      "message": "Questões e comentários"
+   },
+   "panel_help_setup": {
+      "description": "",
+      "message": "Configurar o Ghostery"
+   },
+   "panel_help_support": {
+      "description": "",
+      "message": "Suporte"
+   },
+   "panel_menu_about": {
+      "description": "",
+      "message": "Sobre"
+   },
+   "panel_menu_help": {
+      "description": "",
+      "message": "Ajuda"
+   },
+   "panel_menu_report_broken_site": {
+      "description": "",
+      "message": "Relatar uma página quebrada"
+   },
+   "panel_menu_settings": {
+      "description": "",
+      "message": "Configurações"
+   },
+   "panel_menu_signin": {
+      "description": "",
+      "message": "Entrar"
+   },
+   "panel_menu_signout": {
+      "description": "",
+      "message": "Sair"
+   },
+   "panel_menu_submit_tracker": {
+      "description": "",
+      "message": "Enviar um novo rastreador"
+   },
+   "panel_needs_reload": {
+      "description": "",
+      "message": "Ghostery tem atualizações pendentes."
+   },
+   "panel_signin_success": {
+      "description": "",
+      "message": "Você entrou agora como "
+   },
+   "panel_signin_success_title": {
+      "description": "",
+      "message": "Parabéns! Sua conta Ghostery está pronta."
+   },
+   "panel_title_create_account": {
+      "description": "",
+      "message": "Criar conta"
+   },
+   "panel_tracker_block_tooltip": {
+      "description": "",
+      "message": "Bloquear em todos os sites"
+   },
+   "panel_tracker_breaking_page": {
+      "description": "",
+      "message": "$COUNT$ bloqueou $TRACKERS$",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "4"
+         },
+         "trackers": {
+            "content": "$2",
+            "example": "trackers"
+         }
+      }
+   },
+   "panel_tracker_breaking_page_end": {
+      "description": "",
+      "message": " quebrando a página."
+   },
+   "panel_tracker_found_sources_title": {
+      "description": "",
+      "message": "Rastreadores de URL detectados:"
+   },
+   "panel_tracker_restrict_tooltip": {
+      "description": "",
+      "message": "Restringir nesse site"
+   },
+   "panel_tracker_slow_non_secure": {
+      "description": "",
+      "message": "$COUNT$ $TRACKERS$ lentos e/ou não-seguros",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "4"
+         },
+         "trackers": {
+            "content": "$2",
+            "example": "trackers"
+         }
+      }
+   },
+   "panel_tracker_slow_non_secure_end": {
+      "description": "",
+      "message": " nesta página."
+   },
+   "panel_tracker_trust_tooltip": {
+      "description": "",
+      "message": "Confiar nesse site"
+   },
+   "panel_tracker_warning_compatibility_tooltip": {
+      "description": "",
+      "message": "Rastreador bloqueado quebra página"
+   },
+   "panel_tracker_warning_nonsecure_tooltip": {
+      "description": "",
+      "message": "O rastreador é não-seguro"
+   },
+   "panel_tracker_warning_slow_nonsecure_tooltip": {
+      "description": "",
+      "message": "O rastreador é lento e não-seguro"
+   },
+   "panel_tracker_warning_slow_tooltip": {
+      "description": "",
+      "message": "O rastreador é lento"
+   },
+   "panel_tracker_warning_smartblock_tooltip": {
+      "description": "",
+      "message": "Rastreador bloqueado pelo Bloqueio Inteligente"
+   },
+   "panel_tracker_warning_smartunblock_tooltip": {
+      "description": "",
+      "message": "Rastreador desbloqueado pelo Bloqueio Inteligente"
+   },
+   "panel_view_trackers": {
+      "description": "",
+      "message": "Ver rastreadores"
+   },
+   "password_characters_requirements": {
+      "description": "",
+      "message": "Apenas esses caracteres especiais são permitidos: !@#$%^&*=+()\u003C>{}[];:,./?"
+   },
+   "password_field_label": {
+      "description": "",
+      "message": "Senha"
+   },
+   "password_field_label_required": {
+      "description": "",
+      "message": "Senha necessária."
+   },
+   "password_requirements": {
+      "description": "",
+      "message": "Use entre 8 e 50 caracteres."
+   },
+   "pause_1_hour": {
+      "description": "",
+      "message": "por 1 hora"
+   },
+   "pause_1_hour_condensed": {
+      "description": "",
+      "message": "1 hora"
+   },
+   "pause_24_hours": {
+      "description": "",
+      "message": "por 24 horas"
+   },
+   "pause_24_hours_condensed": {
+      "description": "",
+      "message": "24 horas"
+   },
+   "pause_30_min": {
+      "description": "",
+      "message": "por 30 minutos"
+   },
+   "pause_30_min_condensed": {
+      "description": "",
+      "message": "30 minutos"
+   },
+   "refresh_and_try_again": {
+      "description": "",
+      "message": "Atualize a página e tente novamente"
+   },
+   "rewards_about": {
+      "description": "",
+      "message": "Sobre as Recompensas"
+   },
+   "rewards_code_copied": {
+      "description": "",
+      "message": "código copiado"
+   },
+   "rewards_code_copied_toast_notification": {
+      "description": "",
+      "message": "Código de recompensa copiado!"
+   },
+   "rewards_copy_code": {
+      "description": "",
+      "message": "copiar código"
+   },
+   "rewards_delete": {
+      "description": "",
+      "message": "Excluir esta recompensa"
+   },
+   "rewards_disable": {
+      "description": "",
+      "message": "Desativar as Recompensas"
+   },
+   "rewards_disable_confirm": {
+      "description": "",
+      "message": "OK. entendi."
+   },
+   "rewards_disable_notification": {
+      "description": "",
+      "message": "As Recompensas do Ghostery estão agora desativadas. Você pode sempre ativá-las nas Configurações do Ghostery ou no Painel de Recompensas."
+   },
+   "rewards_expires_in": {
+      "description": "example: Expires in 8 minutes. TYPE will be rewards_expires_in_TYPE listed below.",
+      "message": "Expira em $COUNT$ $TYPE$",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         },
+         "type": {
+            "content": "$2"
+         }
+      }
+   },
+   "rewards_expires_in_days": {
+      "description": "",
+      "message": "dias"
+   },
+   "rewards_expires_in_hours": {
+      "description": "",
+      "message": "horas"
+   },
+   "rewards_expires_in_mins": {
+      "description": "",
+      "message": "minutos"
+   },
+   "rewards_expires_in_secs": {
+      "description": "",
+      "message": "segundos"
+   },
+   "rewards_first_prompt": {
+      "description": "",
+      "message": "Gostaria de optar por continuar até sua Recompensa do Ghostery?"
+   },
+   "rewards_learn_more": {
+      "description": "",
+      "message": "Aprender mais"
+   },
+   "rewards_new_text": {
+      "description": "",
+      "message": "Nova Recompensa descoberta!"
+   },
+   "rewards_no": {
+      "description": "",
+      "message": "não"
+   },
+   "rewards_off": {
+      "description": "",
+      "message": "desligado"
+   },
+   "rewards_off_toast_notification": {
+      "description": "",
+      "message": "As Recompensas do Ghostery estão DESATIVADAS"
+   },
+   "rewards_on": {
+      "description": "",
+      "message": "em"
+   },
+   "rewards_on_toast_notification": {
+      "description": "",
+      "message": "Recompensas do Ghostery estão ATIVADAS"
+   },
+   "rewards_second_prompt": {
+      "description": "",
+      "message": "Você gostaria de optar por não receber as Recompensas do Ghostery?"
+   },
+   "rewards_settings": {
+      "description": "",
+      "message": "Configurações de Recompensa do Ghostery"
+   },
+   "rewards_terms_conditions": {
+      "description": "",
+      "message": "Termos e Condições"
+   },
+   "rewards_yes": {
+      "description": "",
+      "message": "sim"
+   },
+   "select_file_for_import": {
+      "description": "",
+      "message": "Escolha o arquivo .ghost para importar"
+   },
+   "send_button_label": {
+      "description": "",
+      "message": "Enviar"
+   },
+   "server_error_message": {
+      "description": "",
+      "message": "Parece que estamos tendo um problema técnico. Tente novamente mais tarde."
+   },
+   "settings_account": {
+      "description": "",
+      "message": "Conta"
+   },
+   "settings_account_email": {
+      "description": "",
+      "message": "Email"
+   },
+   "settings_account_name": {
+      "description": "",
+      "message": "Nome"
+   },
+   "settings_allow_offers": {
+      "description": "",
+      "message": "participando nas Recompensas do Ghostery"
+   },
+   "settings_allow_trackers": {
+      "description": "",
+      "message": "Permitir rastreadores criados pelos criadores do site"
+   },
+   "settings_allow_trackers_tooltip": {
+      "description": "",
+      "message": "Por exemplo, bloquear um rastreador do Facebook no facebook.com pode quebrar a página."
+   },
+   "settings_announcements": {
+      "description": "",
+      "message": "Fizer anúncios"
+   },
+   "settings_auto_update": {
+      "description": "",
+      "message": "Possibilita atualizações automáticas da biblioteca de rastreadores do Ghostery."
+   },
+   "settings_block_trackers": {
+      "description": "",
+      "message": "Bloquear novos rastreadores adicionados ao Ghostery por padrão"
+   },
+   "settings_blocking": {
+      "description": "",
+      "message": "Bloqueando"
+   },
+   "settings_bottom_left_corner": {
+      "description": "",
+      "message": "Canto inferior esquerdo"
+   },
+   "settings_bottom_right_corner": {
+      "description": "",
+      "message": "Canto inferior direito"
+   },
+   "settings_dismiss_after": {
+      "description": "",
+      "message": "Descartar depois"
+   },
+   "settings_display_in": {
+      "description": "",
+      "message": "Mostrar em"
+   },
+   "settings_edit_account": {
+      "description": "",
+      "message": "Editar conta"
+   },
+   "settings_export_error": {
+      "description": "",
+      "message": "Suas configurações não foram exportadas com sucesso Tente novamente."
+   },
+   "settings_export_header": {
+      "description": "",
+      "message": "Exportar configurações"
+   },
+   "settings_export_reserved_page_error": {
+      "description": "",
+      "message": "Ghostery não pode exportar as configurações quando a página atual é uma das páginas reservadas Vá a uma página diferente e tente novamente."
+   },
+   "settings_export_success": {
+      "description": "",
+      "message": "Suas configurações foram exportadas com sucesso para sua pasta de downloads em"
+   },
+   "settings_export_text": {
+      "description": "",
+      "message": "Salvar uma cópia das preferências do Ghostery e transferir para outro computador"
+   },
+   "settings_filter_all": {
+      "description": "",
+      "message": "Todos os rastreadores"
+   },
+   "settings_filter_all_label": {
+      "description": "",
+      "message": "Tudo"
+   },
+   "settings_filter_blocked": {
+      "description": "",
+      "message": "Rastreadores bloqueados"
+   },
+   "settings_filter_blocked_label": {
+      "description": "",
+      "message": "Bloqueados"
+   },
+   "settings_filter_new": {
+      "description": "",
+      "message": "Novos desde a última atualização"
+   },
+   "settings_filter_new_label": {
+      "description": "",
+      "message": "Novo"
+   },
+   "settings_filter_unblocked": {
+      "description": "",
+      "message": "Rastreadores desbloqueados"
+   },
+   "settings_filter_unblocked_label": {
+      "description": "",
+      "message": "Desbloqueados"
+   },
+   "settings_general_settings": {
+      "description": "",
+      "message": "Configurações Gerais"
+   },
+   "settings_global_blocking": {
+      "description": "",
+      "message": "Bloqueio global"
+   },
+   "settings_hide_alert_trusted": {
+      "description": "",
+      "message": "Ocultar a caixa púrpura em sites confiados"
+   },
+   "settings_highlight_trackers": {
+      "description": "",
+      "message": "Destacar rastreadores interativos"
+   },
+   "settings_highlight_trackers_tooltip": {
+      "description": "",
+      "message": "Às vezes, funcionalidades como compartilhamento em mídias sociais, comentários ou reprodutores de vídeo não funcionarão quando um certo rastreador estiver bloqueado. Se você desejar habilitar uma dessas funcionalidades bloqueadas, clique neste ícone na página:"
+   },
+   "settings_human_web_tooltip": {
+      "description": "",
+      "message": "O Ghostery implementa agora a Web Humana por padrão, uma tecnologia revolucionária que usa a sabedoria do pública para construir uma internet mais privada."
+   },
+   "settings_import_dialog_error": {
+      "description": "",
+      "message": "Ghostery não pode exibir o diálogo de navegação quando a página atual for uma das páginas reservadas do navegador. Vá a uma página diferente e tente novamente."
+   },
+   "settings_import_file_error": {
+      "description": "",
+      "message": "Esse tipo de arquivo é incorreto. Por favor, escolha um arquivo .ghost e tente novamente."
+   },
+   "settings_import_header": {
+      "description": "",
+      "message": "Configurações de importação"
+   },
+   "settings_import_success": {
+      "description": "",
+      "message": "Suas configurações foram importadas com sucesso"
+   },
+   "settings_import_text": {
+      "description": "",
+      "message": "Escolher um arquivo de backup .ghost."
+   },
+   "settings_import_warning": {
+      "description": "",
+      "message": "AVISO: Isso sobrescreverá suas configurações atuais do Ghostery."
+   },
+   "settings_individual_trackers": {
+      "description": "",
+      "message": "Confiar e restringir rastreadores individuais"
+   },
+   "settings_individual_trackers_tooltip": {
+      "description": "",
+      "message": "Escolha que rastreadores específicos bloquear ou permitir em um website para um controle personalizado"
+   },
+   "settings_last_update": {
+      "description": "",
+      "message": "Sincronizada pela última vez em"
+   },
+   "settings_never": {
+      "description": "",
+      "message": "Nunca"
+   },
+   "settings_new_features": {
+      "description": "",
+      "message": "Lançar novas funcionalidades"
+   },
+   "settings_new_trackers": {
+      "description": "",
+      "message": "Adiciona novos rastreadores para sua biblioteca de rastreadores"
+   },
+   "settings_notifications": {
+      "description": "",
+      "message": "Notificações"
+   },
+   "settings_notify_me": {
+      "description": "",
+      "message": "Notificar-me quando o Ghostery:"
+   },
+   "settings_notify_me_tooltip": {
+      "description": "",
+      "message": "Permita que o Ghostery exiba em meu navegador mensagens relacionadas a recursos de novos produtos, atualizações e comentários do cliente."
+   },
+   "settings_offers_tooltip": {
+      "description": "",
+      "message": "Recompensas do Ghostery é uma funcionalidade que permite a você ganhar descontos e ofertas especiais de nossas empresas parceiras."
+   },
+   "settings_opt_in": {
+      "description": "",
+      "message": "Optar"
+   },
+   "settings_purple_box": {
+      "description": "",
+      "message": "Caixa púrpura"
+   },
+   "settings_replace_social": {
+      "description": "",
+      "message": "Substituir botões de mídia social bloqueados por um ícone do Ghostery"
+   },
+   "settings_required_trackers": {
+      "description": "",
+      "message": "Mostrar para mim quando precisar usar um rastreador para usar as funcionalidades do site"
+   },
+   "settings_restricted_sites": {
+      "description": "",
+      "message": "Sites restritos"
+   },
+   "settings_restricted_sites_description": {
+      "description": "",
+      "message": "Os sites aqui listados serão restritos com todos os rastreadores bloqueados."
+   },
+   "settings_searh_by_tracker": {
+      "description": "",
+      "message": "Buscar por rastreador"
+   },
+   "settings_seconds": {
+      "description": "",
+      "message": "segs"
+   },
+   "settings_share_human_web": {
+      "description": "",
+      "message": "compartilhando dados da rede humana"
+   },
+   "settings_share_usage": {
+      "description": "",
+      "message": "compartilhando a analítica de uso da extensão"
+   },
+   "settings_share_usage_tooltip": {
+      "description": "",
+      "message": "Coletamos analíticas de uso para melhor entender de que funcionalidades os usuários gostam. Por exemplo, se você clicar em pausar, coletaremos um ping que nos informará que você utilizou esse recurso."
+   },
+   "settings_show_patterns": {
+      "description": "",
+      "message": "Mostrar URLs do rastreador"
+   },
+   "settings_show_patterns_tooltip": {
+      "description": "",
+      "message": "URLs de rastreadores podem ser encontrados abaixo da descrição do rastreador clicando no rastreador."
+   },
+   "settings_show_purple_box": {
+      "description": "",
+      "message": "Mostrar a caixa púrpura no canto de meu navegador"
+   },
+   "settings_show_purple_box_tooltip": {
+      "description": "",
+      "message": "A caixa púrpura é uma lista em tempo real que é exibido no canto de seu navegador. Esse recurso ajudará você a visualizar os rastreadores conforme eles forem adicionados a uma página da web."
+   },
+   "settings_show_reload_banner": {
+      "description": "",
+      "message": "Mostrar notificações de recarregamento de página em banners na parte superior da extensão."
+   },
+   "settings_show_tracker_count_badge": {
+      "description": "",
+      "message": "Mostrar o crachá de contagem do rastreador no ícone do Ghostery na barra de ferramentas do navegador"
+   },
+   "settings_show_trackers_banner": {
+      "description": "",
+      "message": "Mostrar as notificações de alerta de rastreadores em banners na parte superior da extensão"
+   },
+   "settings_sign_create_text": {
+      "description": "",
+      "message": "As configurações de sua conta sincronizarão com esse dispositivo. Cria uma conta para facilmente sincronizar suas configurações do Ghostery em todos os dispositivos e plataformas."
+   },
+   "settings_signin_create_header": {
+      "description": "",
+      "message": "Entrar / criar conta"
+   },
+   "settings_sites_placeholder": {
+      "description": "",
+      "message": "exemplo.com"
+   },
+   "settings_support_ghostery": {
+      "description": "",
+      "message": "Suporte do Ghostery"
+   },
+   "settings_support_ghostery_by": {
+      "description": "",
+      "message": "Apoiar o Ghostery"
+   },
+   "settings_top_left_corner": {
+      "description": "",
+      "message": "Canto superior esquerdo"
+   },
+   "settings_top_right_corner": {
+      "description": "",
+      "message": "Canto superior direito"
+   },
+   "settings_trackers": {
+      "description": "",
+      "message": "Rastreadores"
+   },
+   "settings_trust_and_restrict": {
+      "description": "",
+      "message": "Confiar e Restringir"
+   },
+   "settings_trusted_restricted_sites": {
+      "description": "",
+      "message": "Confiar e Restringir"
+   },
+   "settings_trusted_sites": {
+      "description": "",
+      "message": "Sites confiados"
+   },
+   "settings_trusted_sites_description": {
+      "description": "",
+      "message": "Os sites listados aqui serão confiados com todos os rastreadores desbloqueados."
+   },
+   "settings_update_failed": {
+      "description": "",
+      "message": "Falha na atualização. Tente novamente mais tarde."
+   },
+   "settings_update_now": {
+      "description": "",
+      "message": "Atualizar agora"
+   },
+   "settings_update_success": {
+      "description": "",
+      "message": "Sucesso!"
+   },
+   "settings_update_up_to_date": {
+      "description": "",
+      "message": "Ainda atualizado"
+   },
+   "setup_additional_view_adblock_desc": {
+      "description": "",
+      "message": "Anti-rastreamento aprimorado"
+   },
+   "setup_additional_view_adblock_title": {
+      "description": "",
+      "message": "Bloqueio de anúncios aprimorado"
+   },
+   "setup_additional_view_antitrack_desc": {
+      "description": "",
+      "message": "Anonimizar rastreadores desbloqueados e desconhecidos para uma maior proteção na navegação."
+   },
+   "setup_additional_view_antitrack_title": {
+      "description": "",
+      "message": "Anti-rastreamento aprimorado"
+   },
+   "setup_additional_view_enabled": {
+      "description": "",
+      "message": "Ativado"
+   },
+   "setup_additional_view_smartblock_desc": {
+      "description": "",
+      "message": "Bloquear e desbloquear automaticamente os rastreadores para otimizar o desempenho da página"
+   },
+   "setup_additional_view_smartblock_title": {
+      "description": "",
+      "message": "Bloqueio inteligente"
+   },
+   "setup_additional_view_title": {
+      "description": "",
+      "message": "Você gostaria de navegar com mais inteligência com nossos recursos recomendados?"
+   },
+   "setup_blocking_view_block_ads": {
+      "description": "",
+      "message": "Apenas rastreadores de anúncios"
+   },
+   "setup_blocking_view_block_custom": {
+      "description": "",
+      "message": "Personalizado"
+   },
+   "setup_blocking_view_block_everything": {
+      "description": "",
+      "message": "Tudo"
+   },
+   "setup_blocking_view_block_nothing": {
+      "description": "",
+      "message": "Nada"
+   },
+   "setup_blocking_view_title": {
+      "description": "",
+      "message": "O Ghostery pode bloquear rastreadores para tornar sua navegação mais limpa, mais rápida e mais segura. O que você gostaria de bloquear?"
+   },
+   "setup_button_create_account": {
+      "description": "",
+      "message": "Criar conta"
+   },
+   "setup_button_done": {
+      "description": "",
+      "message": "Pronto"
+   },
+   "setup_button_exit": {
+      "description": "",
+      "message": "Sair"
+   },
+   "setup_button_next": {
+      "description": "",
+      "message": "Próximo"
+   },
+   "setup_button_previous": {
+      "description": "",
+      "message": "Anterior"
+   },
+   "setup_button_sign_in": {
+      "description": "",
+      "message": "Entrar"
+   },
+   "setup_button_skip": {
+      "description": "",
+      "message": "ignorar"
+   },
+   "setup_choice_view_answer_questions": {
+      "description": "",
+      "message": "Escolha minhas próprias configurações respondendo algumas poucas questões."
+   },
+   "setup_choice_view_custom_setup": {
+      "description": "",
+      "message": "Configuração personalizada"
+   },
+   "setup_choice_view_learn_more": {
+      "description": "",
+      "message": "Saiba mais."
+   },
+   "setup_choice_view_legal": {
+      "description": "",
+      "message": "Ao instalar o Ghostery, você concorda com a $LINK_PP_START$Privacy Policy$LINK_PP_END$ and $LINK_TERMS_START$Terms of Use$LINK_TERMS_END$",
+      "placeholders": {
+         "link_pp_end": {
+            "content": "\u003C/a>"
+         },
+         "link_pp_start": {
+            "content": "\u003Ca href=\"https://www.ghostery.com/about-ghostery/browser-extension-privacy-policy/\" target=\"_blank\">"
+         },
+         "link_terms_end": {
+            "content": "\u003C/a>"
+         },
+         "link_terms_start": {
+            "content": "\u003Ca href=\"https://www.ghostery.com/about-ghostery/browser-extension-end-user-license-agreement/\" target=\"_blank\">"
+         }
+      }
+   },
+   "setup_choice_view_one_click": {
+      "description": "",
+      "message": "Configuração com um clique"
+   },
+   "setup_choice_view_share_data": {
+      "description": "",
+      "message": "Compartilhar minha analítica e dados de Web Humana para melhorar o desempenho do Ghostery."
+   },
+   "setup_choice_view_share_data_no_human_web": {
+      "description": "",
+      "message": "Compartilhar minha analítica para melhorar o desempenho do Ghostery."
+   },
+   "setup_choice_view_title": {
+      "description": "",
+      "message": "Navegue com mais inteligência com o Ghostery! $BR$Como você gostaria de começar?",
+      "placeholders": {
+         "br": {
+            "content": "\u003Cbr />"
+         }
+      }
+   },
+   "setup_data_view_checkbox": {
+      "description": "",
+      "message": "Apoie o Ghostery compartilhando estas informações."
+   },
+   "setup_data_view_desc": {
+      "description": "",
+      "message": "Usamos analítica humana e dados da Web Humana para melhorar o desempenho do Ghostery, sem coletar nenhum dado pessoal. $LINK_START$Saiba mais$LINK_END$.",
+      "placeholders": {
+         "link_end": {
+            "content": "\u003C/a>"
+         },
+         "link_start": {
+            "content": "\u003Ca href=\"https://www.ghostery.com/faqs/\" target=\"_blank\">"
+         }
+      }
+   },
+   "setup_data_view_desc_no_human_web": {
+      "description": "",
+      "message": "Usamos dados de analítica humana para melhorar o desempenho do Ghostery, sem coletar nenhum dado pessoal. $LINK_START$Saiba mais.$LINK_END$.",
+      "placeholders": {
+         "link_end": {
+            "content": "\u003C/a>"
+         },
+         "link_start": {
+            "content": "\u003Ca href=\"https://www.ghostery.com/faqs/\" target=\"_blank\">"
+         }
+      }
+   },
+   "setup_data_view_title": {
+      "description": "",
+      "message": "Gostaria de ajudar a melhorar o Ghostery?"
+   },
+   "setup_display_view_detailed": {
+      "description": "",
+      "message": "Detalhada"
+   },
+   "setup_display_view_detailed_desc": {
+      "description": "",
+      "message": "Lista rastreadores e permite bloqueio personalizado com visões adicionais."
+   },
+   "setup_display_view_simple": {
+      "description": "",
+      "message": "Simples"
+   },
+   "setup_display_view_simple_desc": {
+      "description": "",
+      "message": "Mostra informações básicas de bloqueio."
+   },
+   "setup_display_view_title": {
+      "description": "",
+      "message": "De qual exibição você gostaria?"
+   },
+   "setup_done_view_desc": {
+      "description": "",
+      "message": "O Ghostery irá morar quietinho aqui na barra de seu navegador."
+   },
+   "setup_done_view_title": {
+      "description": "",
+      "message": "Você está pronto!"
+   },
+   "setup_feature_active_in_cliqz": {
+      "description": "",
+      "message": "Esta funcionalidade já está ativa por padrão no Cliqz. $LINK_START$Saiba mais.$LINK_END$",
+      "placeholders": {
+         "link_end": {
+            "content": "\u003C/a>"
+         },
+         "link_start": {
+            "content": "\u003Ca href=\"https://www.ghostery.com/faqs/what-are-the-new-ghostery-8-features/\" target=\"_blank\">"
+         }
+      }
+   },
+   "setup_footer_license": {
+      "description": "",
+      "message": "Ghostery$COPY$; é uma empresa Cliqz. Saiba mais sobre $LINK_START$Cliqz$LINK_END$. $COPY$Cliqz International GmbH, uma subsidiária totalmente controlada pela Cliqz GmbH. Todos os direitos reservados.",
+      "placeholders": {
+         "copy": {
+            "content": "&copy;"
+         },
+         "link_end": {
+            "content": "\u003C/a>"
+         },
+         "link_start": {
+            "content": "\u003Ca href=\"https://cliqz.com\" target=\"_blank\">"
+         }
+      }
+   },
+   "setup_header_email": {
+      "description": "",
+      "message": "Email"
+   },
+   "setup_header_password": {
+      "description": "",
+      "message": "Senha"
+   },
+   "setup_header_sign_in": {
+      "description": "",
+      "message": "Entrar"
+   },
+   "setup_header_sign_in_hide": {
+      "description": "",
+      "message": "Ocultar tela de entrada"
+   },
+   "setup_login_view_confirm_email": {
+      "description": "",
+      "message": "Confirmar email:"
+   },
+   "setup_login_view_confirm_email_error": {
+      "description": "",
+      "message": "Desculpe, os emails não conferem."
+   },
+   "setup_login_view_create_account": {
+      "description": "",
+      "message": "Não tem uma conta? Crie uma."
+   },
+   "setup_login_view_email": {
+      "description": "",
+      "message": "Email:"
+   },
+   "setup_login_view_email_error": {
+      "description": "",
+      "message": "Desculpe, você precisa informar um endereço de email válido."
+   },
+   "setup_login_view_first_name": {
+      "description": "",
+      "message": "Primeiro nome (opcional):"
+   },
+   "setup_login_view_last_name": {
+      "description": "",
+      "message": "Sobrenome (opcional):"
+   },
+   "setup_login_view_log_in": {
+      "description": "",
+      "message": "Já tem uma conta? Entre."
+   },
+   "setup_login_view_password": {
+      "description": "",
+      "message": "Senha:"
+   },
+   "setup_login_view_password_error": {
+      "description": "",
+      "message": "Use entre 8 e 50 caracteres."
+   },
+   "setup_login_view_signed_in_as": {
+      "description": "",
+      "message": "Entrou como"
+   },
+   "setup_login_view_title": {
+      "description": "",
+      "message": "Gostaria de criar uma conta do Ghostery para sincronizar as configurações em todos os navegadores e dispositivos?"
+   },
+   "setup_title": {
+      "description": "",
+      "message": "Configuração do Ghostery"
+   },
+   "setup_upgrade_button_go": {
+      "description": "",
+      "message": "Configure-me"
+   },
+   "setup_upgrade_button_later": {
+      "description": "",
+      "message": "Talvez mais tarde"
+   },
+   "setup_upgrade_desc_1": {
+      "description": "",
+      "message": "$BOLD_START$Bloqueio Inteligente$BOLD_END$ otimiza automaticamente o desempenho conforme você navega.",
+      "placeholders": {
+         "bold_end": {
+            "content": "\u003C/strong>"
+         },
+         "bold_start": {
+            "content": "\u003Cstrong>"
+         }
+      }
+   },
+   "setup_upgrade_desc_2": {
+      "description": "",
+      "message": "$BOLD_START$IU Dinâmica dá a você$BOLD_END$ diversas opções de exibição.",
+      "placeholders": {
+         "bold_end": {
+            "content": "\u003C/strong>"
+         },
+         "bold_start": {
+            "content": "\u003Cstrong>"
+         }
+      }
+   },
+   "setup_upgrade_desc_3": {
+      "description": "",
+      "message": "$BOLD_START$Anti-rastreamento aprimorado$BOLD_END$ protege mais ainda seus dados pessoais.",
+      "placeholders": {
+         "bold_end": {
+            "content": "\u003C/strong>"
+         },
+         "bold_start": {
+            "content": "\u003Cstrong>"
+         }
+      }
+   },
+   "setup_upgrade_subtitle": {
+      "description": "",
+      "message": "O que há de novo?"
+   },
+   "setup_upgrade_title": {
+      "description": "",
+      "message": "Bem-vindo ao Ghostery 8!"
+   },
+   "short_description": {
+      "description": "A short description of this extension (Ghostery).",
+      "message": "O Ghostery é uma poderosa extensão de privacidade. Bloqueie anúncios, interrompa rastreadores e acelere sites."
+   },
+   "summary_alert": {
+      "description": "as in '1 ALERT'",
+      "message": "Alerta"
+   },
+   "summary_alerts": {
+      "description": "as in '5 ALERTS'",
+      "message": "Alertas"
+   },
+   "summary_blocked": {
+      "description": "as in '5 (trackers) BLOCKED'",
+      "message": "Bloqueados"
+   },
+   "summary_custom_settings": {
+      "description": "",
+      "message": "Configurações personalizadas"
+   },
+   "summary_description_not_scanned_1": {
+      "description": "",
+      "message": "Ghostery escaneia apenas páginas \"http\" e \"https\"."
+   },
+   "summary_description_not_scanned_2": {
+      "description": "",
+      "message": "Navegue para outra página e prometo que entregarei os produtos."
+   },
+   "summary_map_these_trackers": {
+      "description": "",
+      "message": "Mapear esses rastreadores"
+   },
+   "summary_page_not_scanned": {
+      "description": "",
+      "message": "Página não escaneada"
+   },
+   "summary_pause_ghostery": {
+      "description": "",
+      "message": "Pausar"
+   },
+   "summary_pause_ghostery_ab_pause": {
+      "description": "",
+      "message": "Pausar"
+   },
+   "summary_pause_ghostery_tooltip": {
+      "description": "",
+      "message": "Extensão Ghostery pausada."
+   },
+   "summary_restrict_site": {
+      "description": "",
+      "message": "Restringir site"
+   },
+   "summary_restrict_site_active": {
+      "description": "",
+      "message": "Site restrito"
+   },
+   "summary_resume_ghostery": {
+      "description": "",
+      "message": "Retomar"
+   },
+   "summary_resume_ghostery_ab_pause": {
+      "description": "",
+      "message": "Retomar"
+   },
+   "summary_resume_ghostery_tooltip": {
+      "description": "",
+      "message": "Extensão Ghostery pausada. Clique para continuar."
+   },
+   "summary_show_menu": {
+      "description": "",
+      "message": "mostrar menu"
+   },
+   "summary_trust_site": {
+      "description": "",
+      "message": "Confiar no site"
+   },
+   "summary_trust_site_active": {
+      "description": "",
+      "message": "Site confiado"
+   },
+   "summary_undo": {
+      "description": "",
+      "message": "Desfazer"
+   },
+   "tooltip_ad_block": {
+      "description": "",
+      "message": "Bloqueio de anúncios aprimorado"
+   },
+   "tooltip_ad_block_body": {
+      "description": "",
+      "message": "Bloqueie anúncios de websites que você visita."
+   },
+   "tooltip_ad_block_body_on": {
+      "description": "",
+      "message": "Os anúncios não foram bloqueados."
+   },
+   "tooltip_anti_track": {
+      "description": "",
+      "message": "Anti-rastreamento aprimorado"
+   },
+   "tooltip_anti_track_body": {
+      "description": "",
+      "message": "Anonimizar rastreadores desbloqueados e desconhecidos para uma maior proteção na navegação."
+   },
+   "tooltip_anti_track_body_on": {
+      "description": "",
+      "message": "Pontos de dados pessoais anonimizados."
+   },
+   "tooltip_body_in_cliqz": {
+      "description": "",
+      "message": "A funcionalidade já está ativa por padrão no Cliqz."
+   },
+   "tooltip_custom_settings": {
+      "description": "",
+      "message": "Usar minhas configurações de rastreador selecionadas."
+   },
+   "tooltip_expert": {
+      "description": "",
+      "message": "Visão detalhada"
+   },
+   "tooltip_pause": {
+      "description": "",
+      "message": "Pausar o Ghostery"
+   },
+   "tooltip_restrict": {
+      "description": "",
+      "message": "Bloqueie sempre os rastreadores deste site."
+   },
+   "tooltip_restrict_on": {
+      "description": "",
+      "message": "Rastreadores bloqueados e o anti-rastreamento ativado neste site. Clique para Desfazer."
+   },
+   "tooltip_resume": {
+      "description": "",
+      "message": "Continuar o Ghostery"
+   },
+   "tooltip_simple": {
+      "description": "",
+      "message": "Visão simples"
+   },
+   "tooltip_smart_block": {
+      "description": "",
+      "message": "Bloqueio inteligente"
+   },
+   "tooltip_smart_block_body": {
+      "description": "",
+      "message": "Bloquear e desbloquear automaticamente os rastreadores para otimizar o desempenho da página"
+   },
+   "tooltip_smart_block_body_on": {
+      "description": "",
+      "message": "O bloqueio inteligente ajustado para otimizar o desempenho da página."
+   },
+   "tooltip_trust": {
+      "description": "",
+      "message": "Bloqueie sempre os rastreadores deste site."
+   },
+   "tooltip_trust_on": {
+      "description": "",
+      "message": "Os rastreadores estão permitidos e o anti-rastreamento está desativado neste site. Clique para Desfazer."
+   },
+   "tracker_description_getting": {
+      "description": "",
+      "message": "Obter descrição do rastreador..."
+   },
+   "tracker_description_learn_more": {
+      "description": "",
+      "message": "Continuar para o perfil completo do rastreador"
+   },
+   "tracker_description_none_found": {
+      "description": "",
+      "message": "Nenhuma descrição do rastreador encontrada."
+   },
+   "tracker_found": {
+      "description": "",
+      "message": "encontrado"
+   },
+   "tracker_plural": {
+      "description": "",
+      "message": "rastreadores"
+   },
+   "tracker_signular": {
+      "description": "",
+      "message": "rastreador"
+   },
+   "trackers_blocked": {
+      "description": "",
+      "message": "Rastreadores bloqueados:"
+   },
+   "unblocked": {
+      "description": "Select this to show only unblocked (unchecked) tags in the tag browser. Should read as 'Show unblocked'.",
+      "message": "bloqueada"
+   },
+   "white_black_list_error_invalid_url": {
+      "description": "",
+      "message": "Digite um email válido."
+   },
+   "whitelist_error_blacklist_url": {
+      "description": "",
+      "message": "Esse site foi removido de nossa lista de Sites Restritos e adicionado à sua lista de Sites Confiados."
+   },
+   "whitelist_error_duplicate_url": {
+      "description": "Options page site whitelisting error message shown when whitelisting a URL that is already in the whitelist.",
+      "message": "Esse site já está na lista branca."
+   }
+}
