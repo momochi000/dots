@@ -18,10 +18,9 @@ urxvt.font:xft:Terminus:size=12
 !URxvt.letterSpace: -3
 
 !urxvt.font: xft:Terminess Powerline\
+!          , xft:ProFont For Powerline:antialias=false:hinting=false:pixelsize=14
 !          , xft:scientifica
 !          , xft:bitocra13full:antialias=false:hinting=false:pixelsize=14
-
-
 
 ! COLORS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
