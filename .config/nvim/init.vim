@@ -29,6 +29,7 @@ call plug#begin()
   Plug 'elzr/vim-json'
   Plug 'leafgarland/typescript-vim'
   Plug 'othree/html5.vim'
+  Plug 'majutsushi/tagbar'
 
   " Writing and notes
   Plug 'vimwiki/vimwiki'
