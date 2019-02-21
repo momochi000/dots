@@ -18,6 +18,7 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rails'
   " Plug 'tpope/vim-projectionist'  " vim-rails for any other framework
+  Plug 'tpope/vim-dispatch'
   "Plug 'w0rp/ale' "async linting
   "Plug neoclide/coc.nvim "Code completion
 
