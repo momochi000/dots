@@ -17,6 +17,7 @@ call plug#begin()
   " IDE
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rails'
+  " Plug 'tpope/vim-projectionist'  " vim-rails for any other framework
   "Plug 'w0rp/ale' "async linting
   "Plug neoclide/coc.nvim "Code completion
 
@@ -42,6 +43,7 @@ call plug#begin()
   Plug 'hzchirs/vim-material'
   Plug 'patstockwell/vim-monokai-tasty'
   Plug 'agreco/vim-citylights'
+  " Plug 'bluz71/vim-moonfly-colors'
 call plug#end()
 
 filetype plugin indent on
