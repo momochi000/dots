@@ -113,6 +113,9 @@ let mapleader = ","   " Map the leader key to comma
 map <Leader>e :Explore<cr>
 map <Leader>s :Sexplore<cr>
 
+nnoremap <Leader>d :Dispatch<CR>
+nnoremap <Leader>D :Dispatch
+
 " pressing < or > will let you indent/unident selected lines
 
 vnoremap < <gv
