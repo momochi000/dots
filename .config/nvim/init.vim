@@ -39,12 +39,12 @@ call plug#begin()
   Plug 'junegunn/limelight.vim'
 
   " Colors
-  Plug 'flazz/vim-colorschemes'
+  "Plug 'flazz/vim-colorschemes'
   Plug 'mhartington/oceanic-next'
-  Plug 'hzchirs/vim-material'
-  Plug 'patstockwell/vim-monokai-tasty'
-  Plug 'agreco/vim-citylights'
-  " Plug 'bluz71/vim-moonfly-colors'
+  "Plug 'hzchirs/vim-material'
+  "Plug 'patstockwell/vim-monokai-tasty'
+  "Plug 'agreco/vim-citylights'
+  "Plug 'bluz71/vim-moonfly-colors'
 call plug#end()
 
 filetype plugin indent on
@@ -102,6 +102,10 @@ set foldmethod=indent
 " Ensure everything unfolded when opening a file
 set foldlevel=99
 
+" ctrlp ignore version control and node_modules
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]((\.(git|hg|svn))|node_modules)$'
+  \ }
 
 " ************************************************************************
 " K E Y   M A P P I N G S
@@ -153,14 +157,25 @@ nnoremap <leader>a :Ack!<Space>
 nnoremap <leader>A :Ack! "<C-R>=expand('<cword>')<CR>"<cr>
 
 
-" ctrlp ignore version control and node_modules
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]((\.(git|hg|svn))|node_modules)$'
-  \ }
+" ************************************************************************
+" C O C   C O M P L E T I O N
+" ctrl-space to trigger autocompletion
+" Note: need to add coc.preferences.autoTrigger: trigger to :CocConfig first
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" carriage return to confirm the suggestion
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" ************************************************************************
+" C O L O R S
 
 set background=dark
 colorscheme OceanicNext
 let g:airline_theme='oceanicnext'
+
+"let g:vim_monokai_tasty_italic = 1
+"colorscheme vim-monokai-tasty
+"let g:airline_theme='monokai_tasty'
 
 " fenetikm/falcon
 " colorscheme SlateDark
