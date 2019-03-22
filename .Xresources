@@ -11,6 +11,7 @@ urxvt*transparent: true
 urxvt*shading: 20
 
 urxvt.font:xft:Terminus:size=12
+!urxvt.font:xft:xos4 Terminus:size=12 ! After latest upgrade, the name seems to have changed to this
 
 !Scientifica seems to have too much line height
 !urxvt.font:xft:scientifica:size=11
