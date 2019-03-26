@@ -17,10 +17,11 @@ call plug#begin()
   " IDE
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rails'
-  " Plug 'tpope/vim-projectionist'  " vim-rails for any other framework
   Plug 'tpope/vim-dispatch'
+  " Plug 'tpope/vim-projectionist'  " vim-rails for any other framework
   "Plug 'w0rp/ale' "async linting
-  "Plug neoclide/coc.nvim "Code completion
+  "Plug 'neoclide/coc.nvim' "Code completion
+  "Plug 'RRethy/vim-hexokinase' " show colors of hex codes
 
   " Syntax
   Plug 'rust-lang/rust.vim'
