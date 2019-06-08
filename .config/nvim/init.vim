@@ -13,15 +13,19 @@ call plug#begin()
   "Plug 'justinmk/vim-dirvish'
   Plug 'kien/ctrlp.vim'
   Plug 'mileszs/ack.vim'
+  Plug 'junegunn/fzf.vim'
+
 
   " IDE
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-dispatch'
-  " Plug 'tpope/vim-projectionist'  " vim-rails for any other framework
+  "Plug 'tpope/vim-projectionist'  " vim-rails for any other framework
   "Plug 'w0rp/ale' "async linting
+  "Plug neoclide/coc.nvim "Code completion
   "Plug 'neoclide/coc.nvim' "Code completion
-  "Plug 'RRethy/vim-hexokinase' " show colors of hex codes
+  "Plug 'rhysd/git-messenger.vim'
+  "Plug 'RRethy/vim-hexokinase'
 
   " Syntax
   Plug 'rust-lang/rust.vim'
@@ -38,6 +42,7 @@ call plug#begin()
   Plug 'vimwiki/vimwiki'
   Plug 'junegunn/goyo.vim'
   Plug 'junegunn/limelight.vim'
+  " https://github.com/soywod/kronos.vim  " Task/time manager
 
   " Colors
   "Plug 'flazz/vim-colorschemes'
@@ -62,7 +67,6 @@ set shiftwidth=2
 set tabstop=4
 
 " Spaces instead of tabs
-
 set expandtab
 
 " Always  set auto indenting on
@@ -92,6 +96,9 @@ set showcmd
 " do incremental searches (annoying but handy);
 set incsearch
 
+" Show regex replacement in realtime
+set inccommand=nosplit
+
 " Always display a status line at the bottom of the window
 set laststatus=2
 
@@ -118,8 +125,8 @@ let mapleader = ","   " Map the leader key to comma
 map <Leader>e :Explore<cr>
 map <Leader>s :Sexplore<cr>
 
-nnoremap <Leader>d :Dispatch<CR>
-nnoremap <Leader>D :Dispatch
+nnoremap <Leader>d :Dispatch
+nnoremap <Leader>D :Dispatch<CR>
 
 " pressing < or > will let you indent/unident selected lines
 
@@ -142,12 +149,18 @@ endif
 
 " Leader <direction> to switch panes
 
+nnoremap <leader>h <C-W><C-J>
 nnoremap <leader>j <C-W><C-J>
 nnoremap <leader>k <C-W><C-K>
 nnoremap <leader>l <C-W><C-L>
 
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>f :NERDTreeFind<cr>
+
+" fzf bindings
+nnoremap <c-p> :Files<cr>
+nnoremap <leader>t :Windows<cr>
+nnoremap <leader>r :Rg<cr>
 
 " Use ack.vim rather than ag.vim but use ag (silver searcher) rather than ack.
 " Ugh
@@ -166,6 +179,19 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 " carriage return to confirm the suggestion
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+
+" ************************************************************************
+" C T A G S
+" when configuring tagbar for osx, use ctags from brew
+"let g:tagbar_ctags_bin='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
+
+" ************************************************************************
+" L I N T I N G
+" For ale
+"let g:ale_completion_enabled = 0 "No autocomplete
+"let g:ale_lint_on_text_changed = 'never'
+"let g:ale_lint_on_enter = 0
 
 " ************************************************************************
 " C O L O R S
