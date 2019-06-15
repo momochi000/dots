@@ -20,6 +20,8 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-dispatch'
+  Plug 'majutsushi/tagbar'
+  "Plug 'liuchengxu/vista.vim'
   "Plug 'tpope/vim-projectionist'  " vim-rails for any other framework
   "Plug 'w0rp/ale' "async linting
   "Plug neoclide/coc.nvim "Code completion
@@ -36,7 +38,6 @@ call plug#begin()
   Plug 'elzr/vim-json'
   Plug 'leafgarland/typescript-vim'
   Plug 'othree/html5.vim'
-  Plug 'majutsushi/tagbar'
 
   " Writing and notes
   Plug 'vimwiki/vimwiki'
@@ -109,6 +110,11 @@ set showmatch
 set foldmethod=indent
 " Ensure everything unfolded when opening a file
 set foldlevel=99
+
+" In case NERDTree is broken
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 1
 
 " ctrlp ignore version control and node_modules
 let g:ctrlp_custom_ignore = {
