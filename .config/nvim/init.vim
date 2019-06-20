@@ -52,6 +52,7 @@ call plug#begin()
   "Plug 'patstockwell/vim-monokai-tasty'
   "Plug 'agreco/vim-citylights'
   "Plug 'bluz71/vim-moonfly-colors'
+  "https://github.com/challenger-deep-theme/vim
 call plug#end()
 
 filetype plugin indent on
