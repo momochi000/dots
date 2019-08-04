@@ -200,6 +200,12 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 "let g:ale_lint_on_text_changed = 'never'
 "let g:ale_lint_on_enter = 0
 
+
+" ************************************************************************
+" L I M E L I G H T
+" In case limelight doesn't dim properly
+" let g:limelight_conceal_ctermfg = 240
+
 " ************************************************************************
 " C O L O R S
 
