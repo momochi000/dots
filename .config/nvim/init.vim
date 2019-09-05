@@ -165,7 +165,6 @@ nnoremap <leader>l <C-W><C-L>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>f :NERDTreeFind<cr>
 
-
 " Use ack.vim rather than ag.vim but use ag (silver searcher) rather than ack.
 " Ugh
 if executable('ag')
