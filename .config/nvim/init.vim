@@ -168,6 +168,7 @@ nnoremap <leader>f :NERDTreeFind<cr>
 nnoremap <c-p> :Files<cr>
 nnoremap <leader>t :Windows<cr>
 nnoremap <leader>r :Rg<cr>
+nnoremap <leader>R :Ack! <C-R>=expand('<cword>')<CR>
 
 " Use ack.vim rather than ag.vim but use ag (silver searcher) rather than ack.
 " Ugh
