@@ -9,8 +9,8 @@ call plug#begin()
 
   " Navigation
   Plug 'scrooloose/nerdtree'
-  Plug 'tpope/vim-vinegar'
-  "Plug 'justinmk/vim-dirvish'
+  Plug 'tpope/vim-vinegar' "alternative to nerdtree
+  "Plug 'justinmk/vim-dirvish' "alternative to nerdtree
   Plug 'kien/ctrlp.vim'
   Plug 'mileszs/ack.vim'
   Plug 'junegunn/fzf.vim'
@@ -24,10 +24,12 @@ call plug#begin()
   "Plug 'liuchengxu/vista.vim'
   "Plug 'tpope/vim-projectionist'  " vim-rails for any other framework
   "Plug 'w0rp/ale' "async linting
-  "Plug neoclide/coc.nvim "Code completion
+  "Plug 'neoclide/coc.nvim' "Code completion
   "Plug 'neoclide/coc.nvim' "Code completion
   "Plug 'rhysd/git-messenger.vim'
   "Plug 'RRethy/vim-hexokinase'
+  "Plug 'welle/context.vim'
+  "Plug 'airblade/vim-gitgutter'
 
   " Syntax
   Plug 'rust-lang/rust.vim'
@@ -200,6 +202,10 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 "let g:ale_completion_enabled = 0 "No autocomplete
 "let g:ale_lint_on_text_changed = 'never'
 "let g:ale_lint_on_enter = 0
+
+" ************************************************************************
+" G I T   G U T T E R
+let g:gitgutter_enabled = 0
 
 
 " ************************************************************************
