@@ -166,11 +166,6 @@ nnoremap <leader>l <C-W><C-L>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>f :NERDTreeFind<cr>
 
-" fzf bindings
-nnoremap <c-p> :Files<cr>
-nnoremap <leader>t :Windows<cr>
-nnoremap <leader>r :Rg<cr>
-nnoremap <leader>R :Ack! <C-R>=expand('<cword>')<CR>
 
 " Use ack.vim rather than ag.vim but use ag (silver searcher) rather than ack.
 " Ugh
@@ -179,6 +174,25 @@ if executable('ag')
 endif
 nnoremap <leader>a :Ack!<Space>
 nnoremap <leader>A :Ack! "<C-R>=expand('<cword>')<CR>"<cr>
+
+
+" ************************************************************************
+" F Z F
+"
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+
+nnoremap <c-p> :Files<cr>
+nnoremap <leader>t :Windows<cr>
+nnoremap <leader>r :RG<cr>
+nnoremap <leader>R :Rg <C-R>=expand('<cword>')<CR>
 
 
 " ************************************************************************
