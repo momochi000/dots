@@ -25,11 +25,10 @@ call plug#begin()
   "Plug 'tpope/vim-projectionist'  " vim-rails for any other framework
   "Plug 'w0rp/ale' "async linting
   "Plug 'neoclide/coc.nvim' "Code completion
-  "Plug 'neoclide/coc.nvim' "Code completion
   "Plug 'rhysd/git-messenger.vim'
   "Plug 'RRethy/vim-hexokinase'
-  "Plug 'welle/context.vim'
-  "Plug 'airblade/vim-gitgutter'
+  "Plug 'welle/context.vim' "This is really great for reading big ugly code
+  Plug 'airblade/vim-gitgutter'
 
   " Syntax
   Plug 'rust-lang/rust.vim'
@@ -179,6 +178,8 @@ nnoremap <leader>A :Ack! "<C-R>=expand('<cword>')<CR>"<cr>
 " ************************************************************************
 " F Z F
 "
+
+" Add custom RG search that uses ripgrep incrementally rather than fzf
 function! RipgrepFzf(query, fullscreen)
   let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
   let initial_command = printf(command_fmt, shellescape(a:query))
@@ -186,12 +187,18 @@ function! RipgrepFzf(query, fullscreen)
   let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
   call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
 endfunction
-
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+
+" Customizes Rg to show a preview window
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
 
 nnoremap <c-p> :Files<cr>
 nnoremap <leader>t :Windows<cr>
-nnoremap <leader>r :RG<cr>
+nnoremap <leader>b :Buffers<cr>
+nnoremap <leader>r :Rg 
 nnoremap <leader>R :Rg <C-R>=expand('<cword>')<CR>
 
 
