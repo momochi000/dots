@@ -99,3 +99,5 @@ source $ZSH/oh-my-zsh.sh
 #
 set -o vi
 bindkey '^R' history-incremental-search-backward
+
+[ -f ~/.config/.fzf.zsh ] && source ~/.config/.fzf.zsh
