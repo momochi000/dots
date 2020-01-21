@@ -11,8 +11,8 @@ call plug#begin()
   Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-vinegar' "alternative to nerdtree
   "Plug 'justinmk/vim-dirvish' "alternative to nerdtree
-  Plug 'kien/ctrlp.vim'
-  Plug 'mileszs/ack.vim'
+  "Plug 'kien/ctrlp.vim'
+  "Plug 'mileszs/ack.vim'
   Plug 'junegunn/fzf.vim'
 
 
