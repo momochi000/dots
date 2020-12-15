@@ -227,6 +227,12 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " G I T   G U T T E R
 let g:gitgutter_enabled = 0
 
+" V I M   W I K I
+" ************************************************************************
+" Set path to dropbox, must be set per machine
+"let g:vimwiki_list = [{'path': '~/Dropbox/my_stuff/vimwiki/',
+"                     \ 'path_html': '~/Dropbox/my_stuff/vimwiki/html/'}]
+"                     \ 'css_name': '/Users/zchin/Dropbox/my_stuff/vimwiki/html/main.css'}]
 
 " ************************************************************************
 " L I M E L I G H T
