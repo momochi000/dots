@@ -188,11 +188,12 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
-" Customizes Rg to show a preview window
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview(), <bang>0)
+let g:fzf_layout = { 'down': '35%' }
+" Customizes Rg to show a preview window (this is now standard)
+"command! -bang -nargs=* Rg
+"  \ call fzf#vim#grep(
+"  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+"  \   fzf#vim#with_preview(), <bang>0)
 
 nnoremap <c-p> :Files<cr>
 nnoremap <leader>t :Windows<cr>
