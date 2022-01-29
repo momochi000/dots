@@ -1,6 +1,7 @@
 if &compatible
   set nocompatible
 endif
+set encoding=utf8
 
 call plug#begin()
   " Baseline
@@ -107,6 +108,7 @@ set laststatus=2
 
 " showmatch: Show the matching bracket for the last ')'?
 set showmatch
+set matchpairs=(:),\[:\],{:},<:>
 
 " fold by indentation
 set foldmethod=indent
@@ -132,6 +134,8 @@ let mapleader = ","   " Map the leader key to comma
 
 map <Leader>e :Explore<cr>
 map <Leader>s :Sexplore<cr>
+
+nnoremap <Leader><Leader> <c-^>
 
 nnoremap <Leader>d :Dispatch
 nnoremap <Leader>D :Dispatch<CR>
