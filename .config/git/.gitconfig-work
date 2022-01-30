@@ -1,0 +1,48 @@
+[user]
+    name = Zachery Chin
+    email = zachery.chin@upstart.com
+    # signinkey =
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge --%f
+    process = git-lfs filter-process
+    required = true
+[alias]
+    # list files which have changed since REVIEW_BASE
+    # (REVIEW_BASE defaults to 'master' in my zshrc)
+    files = !git diff --name-only $(git merge-base HEAD \"$REVIEW_BASE\")
+
+    # Same as above, but with a diff stat instead of just names
+    # (better for interactive use)
+    stat = !git diff --stat $(git merge-base HEAD \"$REVIEW_BASE\")
+
+    # Open all files changed since REVIEW_BASE in vim tabs
+    # Then run fugitive's :Gdiff in each tab, and finally
+    # tell vim-gitgutter to show +/- for changes since REVIEW_BASE
+    review = !nvim -p $(git files) +\"tabdo Gvdiff $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
+
+    # Same as the above, except specify names of files as arguments
+    # instead of opening all files:
+    # git reviewone foo.js bar.js
+    review = !nvim -p +\"tabdo Gvdiff $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
+
+[diff "secret"]
+    textconv = /Users/zacherychin/workspace/infra-secrets/bin/secrets diff
+[core]
+    pager = diff-so-fancy | less --tabs=4 -RFX
+[color]
+    ui = true
+[color "diff-highlight"]
+    oldNormal       = red bold
+    oldHighlight    = red bold 52
+    newNormal       = green bold
+    newHighlight    = green bold 22
+
+[color "diff"]
+    meta = 11
+    frag            = magenta bold
+    commit          = yellow bold
+    old             = red bold
+    new             = green bold
+    whitespace      = red reverse

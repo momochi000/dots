@@ -3,43 +3,47 @@ if &compatible
 endif
 set encoding=utf8
 
+set nomodeline
+
 call plug#begin()
   " Baseline
-  Plug 'tpope/vim-sensible'
   Plug 'bling/vim-airline'
 
   " Navigation
   Plug 'scrooloose/nerdtree'
-  Plug 'tpope/vim-vinegar' "alternative to nerdtree
   "Plug 'justinmk/vim-dirvish' "alternative to nerdtree
-  "Plug 'kien/ctrlp.vim'
-  "Plug 'mileszs/ack.vim'
+  " Plug 'usr/local/opt/fzf' "After installing fzf via brew
   Plug 'junegunn/fzf.vim'
 
 
   " IDE
   Plug 'tpope/vim-fugitive'
-  Plug 'tpope/vim-rails'
+  "Plug 'tpope/vim-rails'
   Plug 'tpope/vim-dispatch'
-  Plug 'majutsushi/tagbar'
-  "Plug 'liuchengxu/vista.vim'
-  "Plug 'tpope/vim-projectionist'  " vim-rails for any other framework
-  "Plug 'w0rp/ale' "async linting
-  "Plug 'neoclide/coc.nvim' "Code completion
-  "Plug 'rhysd/git-messenger.vim'
-  "Plug 'RRethy/vim-hexokinase'
-  "Plug 'welle/context.vim' "This is really great for reading big ugly code
+  " Plug 'majutsushi/tagbar'
+  " Plug 'preservim/tagbar'
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': 'TSUpdate'} " We recommend updating the parsers on update
+  Plug 'nvim-treesitter/nvim-treesitter-refactor'
+  Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+  Plug 'romgrk/nvim-treesitter-context'
+  Plug 'ngmy/vim-rubocop' " needed if not using ALE
   Plug 'airblade/vim-gitgutter'
+  Plug 'rhysd/git-messenger.vim'
+  Plug 'RRethy/vim-illuminate'
 
   " Syntax
-  Plug 'rust-lang/rust.vim'
-  Plug 'scrooloose/syntastic'
+  "Plug 'rust-lang/rust.vim'
+  "Plug 'scrooloose/syntastic'
   Plug 'pangloss/vim-javascript'
-  Plug 'mxw/vim-jsx'
-  Plug 'styled-components/vim-styled-components'
+  Plug 'maxmellon/vim-jsx-pretty'
   Plug 'elzr/vim-json'
-  Plug 'leafgarland/typescript-vim'
-  Plug 'othree/html5.vim'
+  "Plug 'leafgarland/typescript-vim'
+  "Plug 'othree/html5.vim'
+  Plug 'slim-template/vim-slim'
+  Plug 'godlygeek/tabular'
+  Plug 'plasticboy/vim-markdown'
+  Plug 'elixir-editors/vim-elixir'
 
   " Writing and notes
   Plug 'vimwiki/vimwiki'
@@ -49,16 +53,17 @@ call plug#begin()
 
   " Colors
   "Plug 'flazz/vim-colorschemes'
-  Plug 'mhartington/oceanic-next'
+  "Plug 'mhartington/oceanic-next'
   "Plug 'hzchirs/vim-material'
   "Plug 'patstockwell/vim-monokai-tasty'
   "Plug 'agreco/vim-citylights'
   "Plug 'bluz71/vim-moonfly-colors'
-  "https://github.com/challenger-deep-theme/vim
+  Plug 'patstockwell/vim-monokai-tasty'
 call plug#end()
 
 filetype plugin indent on
-syntax enable
+syntax on
+set hidden
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -161,7 +166,6 @@ if bufwinnr(1)
 endif
 
 " Leader <direction> to switch panes
-
 nnoremap <leader>h <C-W><C-J>
 nnoremap <leader>j <C-W><C-J>
 nnoremap <leader>k <C-W><C-K>
@@ -170,35 +174,13 @@ nnoremap <leader>l <C-W><C-L>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>f :NERDTreeFind<cr>
 
-" Use ack.vim rather than ag.vim but use ag (silver searcher) rather than ack.
-" Ugh
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-nnoremap <leader>a :Ack!<Space>
-nnoremap <leader>A :Ack! "<C-R>=expand('<cword>')<CR>"<cr>
-
 
 " ************************************************************************
 " F Z F
 "
 
 " Add custom RG search that uses ripgrep incrementally rather than fzf
-function! RipgrepFzf(query, fullscreen)
-  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
-  let initial_command = printf(command_fmt, shellescape(a:query))
-  let reload_command = printf(command_fmt, '{q}')
-  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
-  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
-endfunction
-command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
-
-let g:fzf_layout = { 'down': '35%' }
-" Customizes Rg to show a preview window (this is now standard)
-"command! -bang -nargs=* Rg
-"  \ call fzf#vim#grep(
-"  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
-"  \   fzf#vim#with_preview(), <bang>0)
+"command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 nnoremap <c-p> :Files<cr>
 nnoremap <leader>t :Windows<cr>
@@ -206,16 +188,7 @@ nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>r :Rg 
 nnoremap <leader>R :Rg <C-R>=expand('<cword>')<CR>
 
-
-" ************************************************************************
-" C O C   C O M P L E T I O N
-" ctrl-space to trigger autocompletion
-" Note: need to add coc.preferences.autoTrigger: trigger to :CocConfig first
-inoremap <silent><expr> <c-space> coc#refresh()
-
-" carriage return to confirm the suggestion
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
+let g:fzf_layout = { 'down': '35%' }
 
 " ************************************************************************
 " C T A G S
@@ -223,15 +196,19 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 "let g:tagbar_ctags_bin='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
 
 " ************************************************************************
-" L I N T I N G
-" For ale
-"let g:ale_completion_enabled = 0 "No autocomplete
-"let g:ale_lint_on_text_changed = 'never'
-"let g:ale_lint_on_enter = 0
+" T R E E  S I T T E R
+lua <<EOF
+require'lspconfig'.solargraph.setup{}
+EOF
+
+lua <<EOF
+local nvim_lsp = require('lspconfig')
+EOF
 
 " ************************************************************************
 " G I T   G U T T E R
-let g:gitgutter_enabled = 0
+let g:gitgutter_enabled = 0 "Disable by default. :GitGutterToggle to flip
+let g:gitgutter_line_highlights_enabled = 1
 
 " V I M   W I K I
 " ************************************************************************
@@ -249,39 +226,12 @@ let g:gitgutter_enabled = 0
 " C O L O R S
 
 " Necessary for true color and italic in vim in tmux
-"let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-"let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 "set termguicolors
 
-set background=dark
-colorscheme OceanicNext
-let g:airline_theme='oceanicnext'
+let g:vim_monokai_tasty_italic = 1
+let g:airline_theme='monokai_tasty'
+colorscheme vim-monokai-tasty
 
-"let g:vim_monokai_tasty_italic = 1
-"colorscheme vim-monokai-tasty
-"let g:airline_theme='monokai_tasty'
-
-" fenetikm/falcon
 " colorscheme SlateDark
-" Chasing_Logic "What I'm using on remote dev
-" VisualStudioDark
-" simplifysimplify-dark
-" vrunchbang-dark
-" office-dark
-" forgotten-dark
-" vim-material
-" one-dark
-" cobalt
-" newproggie
-" synthwave
-" SerialExperimentsLain
-" basic-dark
-" spring-night
-" eldar
-" quantum
-" lucario
-" cyberpunk
-" PerfectDark
-" 1989 " not enough contrast but easy on the eyes
-" evokai
-" obsidian
