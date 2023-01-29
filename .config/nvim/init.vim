@@ -33,6 +33,7 @@ call plug#begin()
 
   " Syntax
   Plug 'rust-lang/rust.vim'
+  Plug 'elixir-editors/vim-elixir'
   Plug 'scrooloose/syntastic'
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
@@ -78,6 +79,9 @@ set autoindent
 
 " select when using the mouse
 set selectmode=mouse
+
+" disable mouse highlighting
+set mouse=
 
 " Don't use hyphens as word boundaries
 set iskeyword +=-
