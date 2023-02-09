@@ -75,6 +75,9 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; Show timestamp when completing TODOs
 (setq org-log-done 'time)
+;; when using tab to cycle org lists, also cycle plain `+` lists
 (setq org-cycle-include-plain-lists 'integrate)
+;; default for plain list items is for them to be folded
 (setq org-startup-folded 'fold)
