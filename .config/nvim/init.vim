@@ -184,7 +184,7 @@ nnoremap <leader>A :Ack! "<C-R>=expand('<cword>')<CR>"<cr>
 
 
 " ************************************************************************
-" F Z F
+" S E A R C H
 "
 
 " Add custom RG search that uses ripgrep incrementally rather than fzf
@@ -212,13 +212,19 @@ nnoremap <leader>R :Rg <C-R>=expand('<cword>')<CR>
 
 
 " ************************************************************************
-" C O C   C O M P L E T I O N
-" ctrl-space to trigger autocompletion
-" Note: need to add coc.preferences.autoTrigger: trigger to :CocConfig first
-inoremap <silent><expr> <c-space> coc#refresh()
-
-" carriage return to confirm the suggestion
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" L S P
+" 1. I don't want LSP to be defaulted when pulling this setup
+" 2. By th etime I set up LSP on a new machine the setup will have changed
+" For these reasons I'll just keep some notes here for future reference
+"
+" Not sure if neovim has disabled/broken this by default or if nvim-cmp breaks
+" this (i suspect the latter), but ctrl-n ctrl-p for keyword completion
+" stopped working. In order to turn it back on i had to add this back to the
+" nvim-cmp setup:
+" mapping = { ...,
+" ['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item()),
+" ['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item()),
+" ...
 
 
 " ************************************************************************
