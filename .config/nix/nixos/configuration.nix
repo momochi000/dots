@@ -65,14 +65,18 @@
 
   services.xserver.desktopManager.xfce.enable = true;
 
+  users.groups.docker = {};
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.momochi = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       bat
-      docker
-      docker-client
+      #docker
+      #docker-client
+      #docker-compose
+      podman #favor podman over docker but need docker occasionally
+      podman-compose
       firefox
       fzf
       git
@@ -142,5 +146,7 @@
     proggyfonts
     meslo-lgs-nf
   ];
+
+  # virtualization.docker.enable = true; # i don't want to run this always
 }
 
