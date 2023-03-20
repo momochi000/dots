@@ -13,7 +13,6 @@ call plug#begin()
   Plug 'tpope/vim-vinegar' "alternative to nerdtree
   "Plug 'justinmk/vim-dirvish' "alternative to nerdtree
   "Plug 'kien/ctrlp.vim'
-  "Plug 'mileszs/ack.vim'
   Plug 'junegunn/fzf.vim'
 
 
@@ -78,8 +77,7 @@ set expandtab
 set autoindent
 
 " select when using the mouse
-set selectmode=mouse
-
+"set selectmode=mouse
 " disable mouse highlighting
 set mouse=
 
@@ -174,14 +172,11 @@ nnoremap <leader>l <C-W><C-L>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>f :NERDTreeFind<cr>
 
-" Use ack.vim rather than ag.vim but use ag (silver searcher) rather than ack.
-" Ugh
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-nnoremap <leader>a :Ack!<Space>
-nnoremap <leader>A :Ack! "<C-R>=expand('<cword>')<CR>"<cr>
-
+" Vim commander:
+"   used with highlight, executing the highlighted line(s)
+vmap <leader>a :%!sh<cr>
+"   execute the current line in shell and place the results below
+nnoremap <leader>A yyp:.!sh<cr>
 
 " ************************************************************************
 " S E A R C H
@@ -198,16 +193,11 @@ endfunction
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
 let g:fzf_layout = { 'down': '35%' }
-" Customizes Rg to show a preview window (this is now standard)
-"command! -bang -nargs=* Rg
-"  \ call fzf#vim#grep(
-"  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
-"  \   fzf#vim#with_preview(), <bang>0)
 
 nnoremap <c-p> :Files<cr>
 nnoremap <leader>t :Windows<cr>
 nnoremap <leader>b :Buffers<cr>
-nnoremap <leader>r :Rg 
+nnoremap <leader>r :Rg<Space>
 nnoremap <leader>R :Rg <C-R>=expand('<cword>')<CR>
 
 
