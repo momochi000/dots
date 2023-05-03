@@ -194,7 +194,8 @@ command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
 let g:fzf_layout = { 'down': '35%' }
 
-nnoremap <c-p> :Files<cr>
+nnoremap <c-p> :GitFiles<cr>
+nnoremap <c-m-p> :Files<cr>
 nnoremap <leader>t :Windows<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>r :Rg<Space>
