@@ -29,6 +29,7 @@ call plug#begin()
   "Plug 'RRethy/vim-hexokinase'
   "Plug 'welle/context.vim' "This is really great for reading big ugly code
   Plug 'airblade/vim-gitgutter'
+  Plug 'windwp/nvim-ts-autotag' " auto close html and other tags
 
   " Syntax
   Plug 'rust-lang/rust.vim'
