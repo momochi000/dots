@@ -20,16 +20,18 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-dispatch'
-  Plug 'majutsushi/tagbar'
+  "Plug 'preservim/tagbar'
   "Plug 'liuchengxu/vista.vim'
   "Plug 'tpope/vim-projectionist'  " vim-rails for any other framework
   "Plug 'w0rp/ale' "async linting
   "Plug 'neoclide/coc.nvim' "Code completion
-  "Plug 'rhysd/git-messenger.vim'
   "Plug 'RRethy/vim-hexokinase'
-  "Plug 'welle/context.vim' "This is really great for reading big ugly code
+  "Plug 'rhysd/git-messenger.vim'
+  Plug 'romgrk/nvim-treesitter-context'
   Plug 'airblade/vim-gitgutter'
-  Plug 'williamboman/nvim-lsp-installer'
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'williamboman/mason.nvim', { 'do': ':MasonUpdate' }
+  Plug 'williamboman/mason-lspconfig.nvim'
   Plug 'neovim/nvim-lspconfig'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
