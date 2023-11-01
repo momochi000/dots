@@ -20,6 +20,7 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-dispatch'
+  Plug 'jpalardy/vim-slime'
   "Plug 'preservim/tagbar'
   "Plug 'liuchengxu/vista.vim'
   "Plug 'tpope/vim-projectionist'  " vim-rails for any other framework
@@ -179,11 +180,20 @@ nnoremap <leader>l <C-W><C-L>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>f :NERDTreeFind<cr>
 
+" ************************************************************************
+" S L I M E
 " Vim commander:
 "   used with highlight, executing the highlighted line(s)
 vmap <leader>a :%!sh<cr>
 "   execute the current line in shell and place the results below
 nnoremap <leader>A yyp:.!sh<cr>
+
+" ctrl-c ctrl-c to execute the currently highlighted line and send it to the
+" configured tmux pane. First time it's run it'll prompt for which pane that
+" is.
+let g:slime_target = "tmux"
+let g:slime_paste_file = expand("$HOME/.config/nvim/.slime_paste")
+
 
 " ************************************************************************
 " S E A R C H
