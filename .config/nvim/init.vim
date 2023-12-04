@@ -220,7 +220,7 @@ nnoremap <leader>R :Rg <C-R>=expand('<cword>')<CR>
 
 
 " ************************************************************************
-" L S P
+" I D E  C O N F I G
 " 1. I don't want LSP to be defaulted when pulling this setup
 " 2. By th etime I set up LSP on a new machine the setup will have changed
 " For these reasons I'll just keep some notes here for future reference
@@ -233,7 +233,7 @@ nnoremap <leader>R :Rg <C-R>=expand('<cword>')<CR>
 " ['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item()),
 " ['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item()),
 " ...
-
+lua require('ide_config')
 
 " ************************************************************************
 " C T A G S
