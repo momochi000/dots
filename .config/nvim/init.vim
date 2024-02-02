@@ -35,6 +35,7 @@ call plug#begin()
   Plug 'williamboman/mason-lspconfig.nvim'
   Plug 'neovim/nvim-lspconfig'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'Olical/conjure'
 
   Plug 'windwp/nvim-ts-autotag' " auto close html and other tags
 
@@ -234,6 +235,7 @@ nnoremap <leader>R :Rg <C-R>=expand('<cword>')<CR>
 " ['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item()),
 " ...
 lua require('ide_config')
+let maplocalleader=" "
 
 " ************************************************************************
 " C T A G S
