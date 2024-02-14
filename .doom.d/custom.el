@@ -15,7 +15,7 @@
    (setq org-agenda-files
          (append
            (list (expand-file-name "dashboard.org" org-directory ))
-           (directory-files-recursively (expand-file-name "/job_hunt" org-directory)  "\\.org$"))))
+           (directory-files-recursively (expand-file-name "job_hunt" org-directory)  "\\.org$"))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
