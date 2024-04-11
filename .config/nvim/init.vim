@@ -234,8 +234,11 @@ nnoremap <leader>R :Rg <C-R>=expand('<cword>')<CR>
 " ['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item()),
 " ['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item()),
 " ...
-lua require('ide_config')
+let g:sexp_filetypes = 'clojure,scheme,lisp,timl,racket,rkt'
 let maplocalleader=" "
+
+lua require('ide_config')
+
 
 " ************************************************************************
 " C T A G S
@@ -276,6 +279,8 @@ let g:gitgutter_enabled = 0
 set background=dark
 colorscheme OceanicNext
 let g:airline_theme='oceanicnext'
+
+let g:limelight_conceal_ctermfg = 240
 
 "let g:vim_monokai_tasty_italic = 1
 "colorscheme vim-monokai-tasty

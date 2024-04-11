@@ -11,6 +11,7 @@
 
  ;; This config adds a single file and recursively under the job hunt folder.
  ;; I'll need to change this when I'm no longer looking for work but the example will be helpful
+ ;; I also put this in config.el. i'm not sure wehre it belongs really
  (let ((org-directory "~/Dropbox/my_stuff/org"))
    (setq org-agenda-files
          (append
