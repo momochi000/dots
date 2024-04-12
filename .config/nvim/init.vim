@@ -271,6 +271,8 @@ let g:gitgutter_enabled = 0
 " ************************************************************************
 " C O L O R S
 
+lua require ('highlights')
+
 " Necessary for true color and italic in vim in tmux
 "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 "let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
