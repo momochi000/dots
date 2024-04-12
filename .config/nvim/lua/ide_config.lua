@@ -1,7 +1,10 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query",
-    --"python", "typescript",
+    --"ruby",
+    --"elixir",
+    --"typescript", "tsx", "css",
+    --"python",
 },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -46,6 +49,9 @@ require'nvim-treesitter.configs'.setup {
     -- python to this config fixed that
     additional_vim_regex_highlighting = {"python", "typescript"},
   },
+  autotag = {
+    enable = true
+  }
 }
 
 require("mason").setup()
