@@ -5,6 +5,8 @@ require'nvim-treesitter.configs'.setup {
     --"elixir",
     --"typescript", "tsx", "css",
     --"python",
+    --"rust",
+    --"markdown", "yaml"
 },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -64,6 +66,16 @@ local lspconfig = require('lspconfig')
 --  cmd = { "/Users/zchin/.local/share/nvim/mason/bin/elixir-ls" };
 --}
 
+--lspconfig.rust_analyzer.setup{
+--  settings = {
+--    ['rust-analyzer'] = {
+--      diagnostics = {
+--        enable = false;
+--      }
+--    }
+--  }
+--}
+
 local on_attach = function(client, bufnr)
   if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_command [[augroup Format]]
@@ -79,13 +91,6 @@ end
   --filetypes = {"typescript", "typescriptreact", "typescript.tsx"},
   --cmd = { "typescript-langugage-server", "--stdio" }
 --}
-
--- lspconfig.rust_analyzer.setup {
---   -- Server-specific settings. See `:help lspconfig-setup`
---   settings = {
---     ['rust-analyzer'] = {},
---   },
--- }
 
 
 -- Global mappings.
@@ -125,3 +130,43 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opts)
   end,
 })
+
+-- Code Companion AI integration
+--require("codecompanion").setup({
+--  adapters = {
+--    openai = function()
+--      return require("codecompanion.adapters").extend("openai", {
+--        schema = {
+--          model = {
+--            -- default = "gpt-4o-2024-11-20"
+--            default = "gpt-4-turbo-2024-04-09"
+--          },
+--        },
+--      })
+--    end,
+--  },
+--  strategies = {
+--    chat = {
+--      adapter = "openai",
+--    },
+--    inline = {
+--      adapter = "openai",
+--    },
+--  },
+--})
+--vim.keymap.set({ "n", "v" }, "<LocalLeader>c", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
+--
+---- Setup nvim-cmp to use with Code Companion
+--local cmp_status, cmp = pcall(require, "cmp")
+--if cmp_status then
+--  cmp.setup({
+--    mapping = cmp.mapping.preset.insert({
+--      ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+--      ["<C-f>"] = cmp.mapping.scroll_docs(4),
+--      ["<C-Space>"] = cmp.mapping.complete(),
+--      ["<C-e>"] = cmp.mapping.abort(),
+--      ["<CR>"] = cmp.mapping.confirm({ select = false }),
+--      -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+--    }),
+--  })
+--end

@@ -13,6 +13,7 @@ call plug#begin()
   Plug 'tpope/vim-vinegar' "alternative to nerdtree
   "Plug 'justinmk/vim-dirvish' "alternative to nerdtree
   "Plug 'kien/ctrlp.vim'
+  "Plug 'junegunn/fzf' "not sure if i need this, maybe if i don't have fzf installed
   Plug 'junegunn/fzf.vim'
 
 
@@ -36,8 +37,17 @@ call plug#begin()
   Plug 'neovim/nvim-lspconfig'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'Olical/conjure'
+  " for lisp development
+  "Plug 'guns/vim-sexp'
+  "Plug 'tpope/vim-sexp-mappings-for-regular-people'
+  "Plug 'tpope/vim-repeat'
+  "Plug 'tpope/vim-surround'
+  "Plug 'windwp/nvim-ts-autotag' " auto close html and other tags
+  "Plug 'hrsh7th/nvim-cmp' "autocompletion to integrate with codecompanion.nvim
 
-  Plug 'windwp/nvim-ts-autotag' " auto close html and other tags
+  " LLM
+  "Plug 'nvim-lua/plenary.nvim'
+  "Plug 'olimorris/codecompanion.nvim'
 
   " Syntax
   Plug 'rust-lang/rust.vim'
@@ -140,6 +150,7 @@ let g:ctrlp_custom_ignore = {
 " K E Y   M A P P I N G S
 
 let mapleader = ","   " Map the leader key to comma
+let maplocalleader= " " "map the localleader key to space
 
 " :imap jk <Esc>
 
@@ -235,7 +246,6 @@ nnoremap <leader>R :Rg <C-R>=expand('<cword>')<CR>
 " ['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item()),
 " ...
 let g:sexp_filetypes = 'clojure,scheme,lisp,timl,racket,rkt'
-let maplocalleader=" "
 
 lua require('ide_config')
 
