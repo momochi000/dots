@@ -101,3 +101,18 @@ set -o vi
 bindkey '^R' history-incremental-search-backward
 
 [ -f ~/.config/.fzf.zsh ] && source ~/.config/.fzf.zsh
+
+# Git aliases
+alias ga="git add"
+alias gaa="git add --all"
+alias gb="git branch"
+alias gco="git checkout"
+alias gc="git commit --verbose"
+alias gd="git diff"
+alias gsb="git status --short -b"
+alias gpr="git pull --rebase"
+alias glod="git log --graph --pretty='%Cred%h%Creset %C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
+alias glo="git log --oneline --decorate"
+alias glog="git log --oneline --decorate --graph"
+alias gloga="git log --oneline --decorate --graph --all"
+
