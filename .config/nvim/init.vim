@@ -141,11 +141,6 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 1
 
-" ctrlp ignore version control and node_modules
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]((\.(git|hg|svn))|node_modules)$'
-  \ }
-
 " ************************************************************************
 " K E Y   M A P P I N G S
 
@@ -223,8 +218,8 @@ command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
 let g:fzf_layout = { 'down': '35%' }
 
-nnoremap <c-p> :GitFiles<cr>
-nnoremap <c-m-p> :Files<cr>
+"nnoremap <c-p> :GitFiles<cr>
+nnoremap <c-p> :Files<cr>
 nnoremap <leader>t :Windows<cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>r :Rg<Space>

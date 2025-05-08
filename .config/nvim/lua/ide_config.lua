@@ -60,13 +60,24 @@ require("mason").setup()
 
 
 
--- Setup language servers.
-local lspconfig = require('lspconfig')
---lspconfig.elixirls.setup{
---  cmd = { "/Users/zchin/.local/share/nvim/mason/bin/elixir-ls" };
---}
-
---lspconfig.rust_analyzer.setup{
+-- Setup language servers. (updated this, now it requires neovim >=0.11
+--vim.diagnostic.config({
+--  virtual_text = {
+--    --prefix = "●", -- You can change the symbol
+--    spacing = 4,
+--  },
+--  signs = true,
+--  underline = true,
+--  update_in_insert = false, -- Optional: update diagnostics in insert mode
+--})
+--
+--vim.lsp.enable('elixirls')
+--vim.lsp.config('elixirls', {
+--  cmd = { "/nix/store/wyqliwbiklr8wyw2h7av33chcqfxxf0l-elixir-ls-0.24.1/bin/elixir-ls" };
+--})
+--
+--vim.lsp.enable('rust_analyzer')
+--vim.lsp.config('rust_analyzer', {
 --  settings = {
 --    ['rust-analyzer'] = {
 --      diagnostics = {
@@ -74,63 +85,90 @@ local lspconfig = require('lspconfig')
 --      }
 --    }
 --  }
---}
-
-local on_attach = function(client, bufnr)
-  if client.server_capabilities.documentFormattingProvider then
-    vim.api.nvim_command [[augroup Format]]
-    vim.api.nvim_command [[autocmd! * <buffer>]]
-    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
-    vim.api.nvim_command [[augroup END]]
-  end
-end
-
--- lspconfig.pyright.setup {}
---lspconfig.tsserver.setup {
-  --on_attach = on_attach,
-  --filetypes = {"typescript", "typescriptreact", "typescript.tsx"},
-  --cmd = { "typescript-langugage-server", "--stdio" }
---}
-
-
--- Global mappings.
--- See `:help vim.diagnostic.*` for documentation on any of the below functions
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
-
--- Use LspAttach autocommand to only map the following keys
--- after the language server attaches to the current buffer
-vim.api.nvim_create_autocmd('LspAttach', {
-  group = vim.api.nvim_create_augroup('UserLspConfig', {}),
-  callback = function(ev)
-    -- Enable completion triggered by <c-x><c-o>
-    vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
-
-    -- Buffer local mappings.
-    -- See `:help vim.lsp.*` for documentation on any of the below functions
-    local opts = { buffer = ev.buf }
-    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
-    vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
-    vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
-    vim.keymap.set('n', '<space>wl', function()
-      print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-    end, opts)
-    vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
-    vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
-    vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
-    vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-    vim.keymap.set('n', '<space>f', function()
-      vim.lsp.buf.format { async = true }
-    end, opts)
-  end,
-})
-
+--})
+--
+--local on_attach = function(client, bufnr)
+--  if client.server_capabilities.documentFormattingProvider then
+--    vim.api.nvim_command [[augroup Format]]
+--    vim.api.nvim_command [[autocmd! * <buffer>]]
+--    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
+--    vim.api.nvim_command [[augroup END]]
+--  end
+--end
+--
+--
+--vim.lsp.enable('pylsp')
+--vim.lsp.config('pylsp', {
+--  settings = {
+--    pylsp = {
+--      plugins = {
+--        pycodestyle = {
+--          ignore = {'E501', 'W391'},
+--          maxLineLength = 120
+--        }
+--      }
+--    }
+--  }
+--})
+--
+--vim.lsp.enable('biome')
+--vim.lsp.config('biome', {
+--  cmd = { "/nix/store/fhzxbp4pn1qzl18cq08jq4dj152bmmyx-nodejs-22.9.0/bin/node", "/Users/zacherychin/Software/lang/node/node_modules/@biomejs/biome/bin/biome", "lsp-proxy" },
+--})
+--
+---- vim.lsp.set_log_level("debug")
+--
+--vim.lsp.enable('ts_ls')
+--vim.lsp.config('ts_ls', {
+--  on_attach = on_attach,
+--  --filetypes = {"typescript", "typescriptreact", "typescript.tsx"},
+--  cmd = { "/nix/store/fhzxbp4pn1qzl18cq08jq4dj152bmmyx-nodejs-22.9.0/bin/node", "/Users/zacherychin/Software/lang/node/node_modules/.bin/typescript-language-server", "--stdio" },
+--})
+--
+--
+---- Global mappings.
+---- See `:help vim.diagnostic.*` for documentation on any of the below functions
+--vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
+--vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+--vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+--vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
+--
+--
+--vim.api.nvim_create_autocmd('lspattach', {
+--  group = vim.api.nvim_create_augroup('my.lsp', {}),
+--  callback = function(args)
+--    local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
+--    local opts = { buffer = args.buf }
+--
+--    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+--    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+--    if client:supports_method('textdocument/implementation') then
+--      -- create a keymap for vim.lsp.buf.implementation ...
+--      vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+--    end
+--
+--    -- enable auto-completion. note: use ctrl-y to select an item. |complete_ctrl-y|
+--    if client:supports_method('textdocument/completion') then
+--      -- optional: trigger autocompletion on every keypress. may be slow!
+--      -- local chars = {}; for i = 32, 126 do table.insert(chars, string.char(i)) end
+--      -- client.server_capabilities.completionprovider.triggercharacters = chars
+--
+--      --vim.lsp.completion.enable(true, client.id, args.buf, {autotrigger = true})
+--    end
+--    -- auto-format ("lint") on save.
+--    -- usually not needed if server supports "textdocument/willsavewaituntil".
+--    if not client:supports_method('textdocument/willsavewaituntil')
+--        and client:supports_method('textdocument/formatting') then
+--      vim.api.nvim_create_autocmd('bufwritepre', {
+--        group = vim.api.nvim_create_augroup('my.lsp', {clear=false}),
+--        buffer = args.buf,
+--        callback = function()
+--          vim.lsp.buf.format({ bufnr = args.buf, id = client.id, timeout_ms = 1000 })
+--        end,
+--      })
+--    end
+--  end,
+--})
 -- Code Companion AI integration
 --require("codecompanion").setup({
 --  adapters = {
@@ -138,8 +176,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
 --      return require("codecompanion.adapters").extend("openai", {
 --        schema = {
 --          model = {
+--            default = "o3-mini"
 --            -- default = "gpt-4o-2024-11-20"
---            default = "gpt-4-turbo-2024-04-09"
 --          },
 --        },
 --      })
